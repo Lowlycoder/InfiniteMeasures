@@ -1,0 +1,186 @@
+# credit https://gist.github.com/Yousha/a5514afd6cda8afba800f5af9f7115b4
+## OS
+##### Windows
+Thumbs.db  # thumbnail cache files
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump  # Dump file
+[Dd]esktop.ini  # Folder config file
+$RECYCLE.BIN/  # Recycle Bin used on file shares
+*.cab  # Install files
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk  # shortcuts
+##### Linux
+*~
+.fuse_hidden*  # temp files created if a process still has a handle open of a deleted file
+.directory  # KDE directory preferences
+.Trash-*
+.nfs*  # created when opened file is removed but is still accessed
+##### MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon  # Icon must end with two \r
+._*  # Thumbnails
+.DocumentRevisions-V100  # Files that might appear in the root of a volume
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB  # Directories potentially created on remote AFP share
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+## text editors
+##### Vim
+[._]*.s[a-v][a-z]  # Swap
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim  # Session
+Sessionx.vim
+.netrwhist  # Temporary
+tags  # Auto-generated tag files
+[._]*.un~  # Persistent undo
+##### Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations  # Org-mode
+*_archive
+*_flymake.*  # flymake-mode
+/eshell/history  # eshell files
+/eshell/lastdir
+/elpa/  # elpa packages
+*.rel  # reftex files
+/auto/  # AUCTeX auto folder
+.cask/  # cask packages
+dist/
+flycheck_*.el  # Flycheck
+/server/  # server auth directory
+.projectile  # projectiles files
+.dir-locals.el  # directory configuration
+/network-security.data  # network security
+##### SublimeText
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace  # Workspace files are user-specific
+*.sublime-project  # Project files should usualy not be ignored, but since we won't use it, we ignore it
+sftp-config.json
+sftp-config-alt*.json
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+GitHub.sublime-settings  # Sublime-github pkg stores github token here https://packagecontrol.io/packages/sublime-github
+##### TextMate
+*.tmproj
+*.tmproject
+tmtags
+##### VisualStudioCode
+.vscode/
+*.code-workspace
+.history/  # Local history
+##### NetBeans
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+nbdist/
+.nb-gradle/
+##### JetBrains
+.idea/
+cmake-build-*/
+*.iws
+out/  # IntelliJ
+.idea_modules/  # mpeltonen/sbt-idea plugin
+atlassian-ide-plugin.xml  # JIRA plugin
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+##### Eclipse
+.metadata
+bin/
+tmp/
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.externalToolBuilders/
+*.launch  # Locally stored "Eclipse launch configurations"
+*.pydevproject  # PyDev specific (Python IDE for Eclipse)
+.cproject  # CDT-specific (C/C++ Development Tooling)
+.autotools  # CDT- autotools
+.factorypath  # Java annotation processor (APT)
+.buildpath  # PDT-specific (PHP Development Tools)
+.target  # sbteclipse plugin
+.tern-project
+.texlipse  # TeXlipse plugin
+.springBeans  # STS (Spring Tool Suite)
+.recommenders/  # Code Recommenders
+.apt_generated/  # Annotation Processing
+.apt_generated_test/
+.cache-main  # Scala IDE specific (Scala & Java development for Eclipse)
+.scala_dependencies
+.worksheet
+.project  # Project description file should be tracked if it contains build/dependency configurations
+
+##### Gradle
+.gradle
+**/build/
+!src/**/build/
+gradle-app.setting  # Ignore Gradle GUI config
+!gradle-wrapper.jar  # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+.gradletasknamecache  # Cache of project
+
+##### Composer
+composer.phar
+/vendor/
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+composer.lock
+
+##### SASS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+##### Backup
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+##### miscalneous
+secring.*  # GPG secret key ring
+.dropbox
+.dropbox.attr
+.dropbox.cache
+*.ppk  # PuTTY Private key

@@ -1,0 +1,13 @@
+{
+  "name": "colibrit",
+  "version": "0.1.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "prettier": "latest"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "all"
+  }
+}
