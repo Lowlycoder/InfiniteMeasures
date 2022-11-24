@@ -1,0 +1,22 @@
+php_flag short_open_tag on
+
+#SetEnv SHORT_OPEN_TAGS 0
+#SetEnv REGISTER_GLOBALS 0
+#SetEnv MAGIC_QUOTES 0
+#SetEnv SESSION_AUTOSTART 0
+#SetEnv ZEND_OPTIMIZER 1
+
+# prevent browser from listing files in dirs
+Options -Indexes
+
+# enable runtime rewriting
+RewriteEngine on
+
+# file dne proceed to rewrite rule
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# directory dne proceed to rewrite rule
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# redirect all traffic to index.php
+RewriteRule ^(.*)$ index.php?$1

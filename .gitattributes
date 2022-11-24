@@ -1,0 +1,29 @@
+# GITATTRIBUTES FOR WEB PROJECTS
+
+# AUTO-DETECT
+#   Handle line endings automatically for files detected as
+#   text and leave all files detected as binary untouched.
+#   This will handle all files NOT defined below.
+* text=auto
+
+# SOURCE CODE
+*.css      text
+*.htm      text
+*.html     text
+*.js       text
+*.php      text
+*.sql      text
+
+# DOCKER
+*.dockerignore text
+Dockerfile     text
+
+# DOCUMENTATION
+*.md         text
+*README*     text
+
+# CONFIGS
+.gitattributes  text
+.gitconfig      text
+.gitignore      text
+.htaccess       text
