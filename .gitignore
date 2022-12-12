@@ -1,0 +1,11 @@
+## modules
+node_modules/
+
+## text editors
+##### VisualStudioCode
+.vscode/
+*.code-workspace
+.history/  # Local history
+
+##### JetBrains
+.idea/
