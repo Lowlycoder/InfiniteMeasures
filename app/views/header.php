@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/bb762585be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
     <title>Isanté</title>
@@ -13,7 +13,7 @@
     <!-- Entête de la page  -->
     <header>
         <div class="logo_Isanté">
-            <a href="#"><img src="images\Isanté_logo.png" alt="logo" width="200px" height="80px" ></a>
+            <a href="#"><img src="./images/Isanté_logo.png" alt="logo" width="200px" height="80px" ></a>
         </div>
         <div id="bare_menu">
             <nav>
@@ -47,6 +47,6 @@
         </div>
         
     </header>    
-    <img src="images\home_picture.jpg" alt="home_picture" width="100%" height="100%">
+    <img src="./images/home_picture.jpg" alt="home_picture" width="100%" height="100%">
 </body>
 </html>
