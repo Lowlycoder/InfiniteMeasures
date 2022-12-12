@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="css/contact.css">
     <title>contact_page</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 
         <div class="contact_form">
 
-            <form action="contact_page.php" method="POST">
+            <form action="contact.php" method="POST">
                 <label for="name" >Nom et Prénom</label><br>
                 <input type="text" name="name" id="name" class="input-field"><br>
                 <label for="adresse_mail">Email</label><br>
