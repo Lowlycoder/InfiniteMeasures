@@ -61,7 +61,7 @@ header ul{
 .switch_language{
     padding-top: 20px;
 }
-.connect{
+#connection{
     display:flex;
     flex-direction: row;
     text-align: center;
@@ -114,5 +114,13 @@ footer{
     text-decoration: none;
 }
 .info a:hover{
+    color:black;
+}
+#contact a{
+    color:white;
+    text-decoration: none;
+}
+
+#contact a:hover{
     color:black;
 }
