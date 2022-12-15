@@ -42,11 +42,7 @@ $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
 $app->router->get('/reset', [AuthController::class, 'reset']);
-$app->router->get('/contact', function () {
-    return 'Get contact page';
-});
-$app->router->post('/contact', function () {
-    return 'Handle contact form';
-});
+$app->router->get('/contact', [HomeController::class, 'contact']);
+$app->router->post('/contact', [HomeController::class, 'contact']);
 
 $app->run();
