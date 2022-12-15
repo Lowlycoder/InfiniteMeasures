@@ -37,11 +37,14 @@ $app = new Application($dbConfig);
 
 $app->router->get('/', [HomeController::class, 'index']);
 $app->router->get('/faq', [HomeController::class, 'faq']);
+$app->router->get('/cgu', [HomeController::class, 'cgu']);
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
 $app->router->get('/reset', [AuthController::class, 'reset']);
+$app->router->get('/qcm', [HomeController::class, 'qcm']);
+$app->router->get('/empreinte-carbone', [HomeController::class, 'empreinteCarbone']);
 $app->router->get('/contact', [HomeController::class, 'contact']);
 $app->router->post('/contact', [HomeController::class, 'contact']);
 
