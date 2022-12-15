@@ -1,5 +1,6 @@
 <?php
 
+use app\controllers\AuthController;
 use core\Application;
 use app\Controllers\HomeController;
 
@@ -23,22 +24,17 @@ spl_autoload_register(function ($class) {
     if (file_exists("../$class.php")) {
         require_once "../$class.php";
     }
-//    if (file_exists('../app/controllers/' . $class . '.php')) require_once '../app/controllers/' . $class . '.php';
-//    else if (file_exists('../app/models/' . $class . '.php')) require_once '../app/models/' . $class . '.php';
-//    else if (file_exists('../app/views/' . $class . '.php')) require_once '../app/views/' . $class . '.php';
-//    else if (file_exists('../core/' . $class . '.php')) require_once '../core/' . $class . '.php';
 });
 
-$config = [
-    'credentials' => [ // database credentials
-        'hostname' => 'localhost:3306',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'mvc'
-    ]
+$dbConfig = [
+    'hostname' => 'localhost:3306',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'colibrit'
 ];
 
-$app = new Application();
+$app = new Application($dbConfig);
+
 $app->router->get('/', [HomeController::class, 'index']);
 $app->router->get('/faq', [HomeController::class, 'faq']);
 $app->router->get('/login', [AuthController::class, 'login']);

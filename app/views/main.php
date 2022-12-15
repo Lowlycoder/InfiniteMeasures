@@ -21,6 +21,8 @@
 
     <!-- page specific js -->
     <script src="<?= BASE_URL_ASSETS ?>js/global.js"></script>
+
+    <?= $head ?? null ?>
 </head>
 <body>
 {{content}}
