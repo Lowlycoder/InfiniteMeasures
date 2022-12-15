@@ -2,7 +2,7 @@
     <div class="connect">
         <form action="/login" method="POST">
 
-            <h1 class="titre">Bienvenue chez ISanté</h1>
+            <h1 class="titre">Bienvenue chez Isanté</h1>
             <br>
             <label for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="example@example.com" style="font-size: 1rem" required>
