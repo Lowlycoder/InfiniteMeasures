@@ -32,6 +32,24 @@ header ul{
 #bare_menu a:hover{
     color:black;
 }
+#search_bar{
+    background-color:rgb(243, 243, 243);
+    border-radius:2rem;
+    margin-top:20px;
+    padding:0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+#search-button{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    border:0;
+    cursor:pointer;
+    background-color:rgb(245, 242, 242);
+
+}
 
 #search_container{
     background-color:rgb(243, 243, 243);
