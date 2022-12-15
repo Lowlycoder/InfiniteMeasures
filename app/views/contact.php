@@ -36,26 +36,27 @@
     
     <?php
 
-    $name=$_POST["name"];
-    $email=$_POST["email"];
-    $subject=$_POST["subject"];
-    $message="<strong>From :</strong>".$email."\n".$_POST["message"]."\n\n\n"."Cordialement ".$_POST["name"].'.';
+if (isset($_POST['subject'])) // On vérifie si le sujet a été remplie: c'est juste pour éviter que le serveur exécute tout le script php. Ce qui enverait une erreure
+{
+    $to="isante044@gmail.com";   //destinataire du mail
+    $subject=$_POST['subject'];  //sujet du mail
+    $message="<strong>From :</strong>{$_POST['email']}<br>{$_POST['message']}<br><br><br>Cordialement ".$_POST['name'].'.'; //message du mail
 
-    $to="kenneth.bongahermann@gsrstudent.ma";
     $headers=array(
-        'From: '=>  $email,
-        'Reply-To' => $email,
+        'From'=>  $_POST['email'],
+        'Reply-To' => $_POST['email'],
         'content-type' => 'text/html'
-    );
+    );   // Le header est un paramètre de la fonction mail qui contient entêtes
    
     $sentMail=mail($to,$subject,$message,$headers);
-    if(!empty($_POST["message"]) ){
+    if(!empty($_POST['message']) ){
         if($sentMail){
             echo "Your email has been sent successfully !";
         }else{
             echo "Error !!!";
         }
     }
+}
     ?>
 
 
