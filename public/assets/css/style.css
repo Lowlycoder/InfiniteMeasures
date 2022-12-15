@@ -29,6 +29,9 @@ header ul{
 #bare_menu a{
     color:#88CAF0;
 }
+#bare_menu a:hover{
+    color:black;
+}
 
 #search_container{
     background-color:rgb(243, 243, 243);
@@ -46,7 +49,7 @@ header ul{
     text-align: center;
 
 }
-.login{
+#login{
     border:solid 2px;
     border-color: #88CAF0;
     border-radius:10px;
@@ -54,12 +57,11 @@ header ul{
     height:50px;
     
 }
-.signup{
+#signup{
     background-color:#88CAF0;
     border-radius:10px;
     width:100px;
     height:50px;
-    padding-bottom: 50px;
 }
 
 
@@ -90,5 +92,9 @@ footer{
 }
 .info a{
     color:white;
-    color:rgb(94, 93, 93);
+    margin-left:10px;
+    text-decoration: none;
+}
+.info a:hover{
+    color:black;
 }
