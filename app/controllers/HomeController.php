@@ -14,6 +14,7 @@ class HomeController extends Controller
         $data = ['title' => 'home',
             'page' => $homeModel->getPageText()];
         $data['description_html'] = $homeModel->getViewHtml('html_description', $data);
+
         return $this->render('home', $data);
     }
 
