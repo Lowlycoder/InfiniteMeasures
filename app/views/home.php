@@ -1,3 +1,6 @@
+<?php
+require("header.php");
+?>
 <div class="site-container">
     <img src="<?= BASE_URL_ASSETS ?>images/logo50x50.png" alt="logo"/>
     <h1>
@@ -21,3 +24,5 @@
         </div>
     <?php endforeach; ?>
 </div>
+<?php
+require('footer.php');

@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/bb762585be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
-</head>
+</head> -->
 
 
     <footer style="background-color: #88CAF0;border-top: 1px solid red;padding:10px 0;width:100%;position:relative;">
@@ -40,7 +40,7 @@
         </div><br>
                 
     </footer>
-   
+<!--    
 
 </body>
-</html>
+</html> -->
