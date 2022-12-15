@@ -43,6 +43,8 @@ $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
 $app->router->get('/reset', [AuthController::class, 'reset']);
+$app->router->get('/qcm', [HomeController::class, 'qcm']);
+$app->router->get('/empreinte-carbone', [HomeController::class, 'empreinteCarbone']);
 $app->router->get('/contact', function () {
     return 'Get contact page';
 });
