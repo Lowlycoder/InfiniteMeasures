@@ -17,13 +17,13 @@ class HomeController extends Controller
         return $this->render('home', $data);
     }
 
-    public function info(): string
+    public function faq(): string
     {
         $homeModel = new HomeModel();
-        $data = ['title' => 'info',
-            'page' => $homeModel->getPageText(),
-            'description_html' => 'description'
-        ];
-        return $this->render('home', $data);
+        $data = ['title' => 'FAQ',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/accordion.css' rel='stylesheet' type='text/css'>",
+            'faq' => $homeModel->getFAQ()];
+
+        return $this->render('faq', $data);
     }
 }
