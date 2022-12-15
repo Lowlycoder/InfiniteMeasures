@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use core\Application;
 use core\Database;
 use core\Model;
 
@@ -15,13 +16,14 @@ class HomeModel extends Model
 
     public function getTextFromDB(): array
     {
-        $this->database->table('templates');
-        $this->database->join('left', 'template_links', 'template_links.template_id = templates.id');
-        $this->database->where('templates.id', '1');
-        $this->database->orderBy('template_links.title');
-        $this->database->fetch(Database::PDO_FETCH_MULTI);
+        $db = Application::$app->db;
+        $db->table('templates');
+        $db->join('left', 'template_links', 'template_links.template_id = templates.id');
+        $db->where('templates.id', '1');
+        $db->orderBy('template_links.title');
+        $db->fetch(Database::PDO_FETCH_MULTI);
 
-        $templateLinks = $this->database->runSelectQuery('templates.*', 'template_links.title as link_title', 'template_links.url as link_url');
+        $templateLinks = $db->runSelectQuery('templates.*', 'template_links.title as link_title', 'template_links.url as link_url');
 
         $page = ['info' => [], 'links' => []];
 
@@ -52,5 +54,13 @@ class HomeModel extends Model
                 ]
             ]
         ];
+    }
+
+    public function getFAQ(): array
+    {
+        $db = Application::$app->db;
+        $db->table('faq');
+        $db->fetch(Database::PDO_FETCH_MULTI);
+        return $db->runSelectQuery();
     }
 }

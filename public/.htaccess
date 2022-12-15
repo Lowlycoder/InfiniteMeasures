@@ -10,5 +10,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # directory dne proceed to rewrite rule
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# direct all traffic to our index.php file
+# direct all traffic to index.php file
 RewriteRule ^(.*)$ index.php?$1
