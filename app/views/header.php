@@ -15,7 +15,7 @@
         <div class="logo_Isanté">
             <a href="#"><img src="<?= BASE_URL_ASSETS ?>images/Isanté_logo.png" alt="logo" width="200px" height="80px" ></a>
         </div>
-        <div id="bare_menu">
+        <div id="bare_menu"> <!-- La bare de navigation -->
             <nav>
                 <ul>
                     <li><a href="#" style="text-decoration: none;">Fun Fact</a></li>
@@ -35,13 +35,13 @@
         <div class="switch_language"> <!-- C'est ici que l'on change la langue de notre site -->
             <a href="#"><img src="<?= BASE_URL_ASSETS ?>images/French_flag.png" alt="flag" width="30px" height="30px"></a>
         </div>
-        <div class="connect" style="margin:auto 20px auto auto;">
+        <div id="connection" style="margin:auto 20px auto auto;"> <!-- C'est ici que l'on se connecte dans notre site -->
             <div id="login" style="margin-right:10px;">
-                <a href="#" style="color: black;text-decoration: none;text-align: center;">Log in</a>
+                <a href="/login" style="color: black;text-decoration: none;text-align: center;">Log in</a>
             </div>
 
             <div id="signup">
-                <a href="#" style="color: white;text-decoration: none;text-align: center;">Sign up</a>
+                <a href="/register" style="color: white;text-decoration: none;text-align: center;">Sign up</a>
             </div>
 
         </div>
