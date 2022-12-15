@@ -15,8 +15,8 @@
         <div class="footer-container" style="color:white;margin: auto;max-width: 1170px;height:100px;margin-bottom: 50px;">
             <div class="row" style="display:flex;flex-direction: row;margin-left:100px;">
 
-                <div  style="width:25%;margin-left:20px;margin-top:0;">
-                    <h3 style="padding-left:50px;">Contacts</h3>
+                <div id="contact" style="width:25%;margin-left:20px;">
+                    <a href="/contact"><h3 style="padding-left:50px;">Contacts</h3></a>
                     <span style="padding-left:30px">+33 0 78 54 21 69</span><br>
                     <span>Adresse: 75011 Paris, France</span>
                 </div>
