@@ -12,15 +12,15 @@ class Application
     public Router $router;
     public View $view;
     public ?Controller $controller = null;
+    public Database $db;
 
-    public function __construct() // string $dirname, array $config
+    public function __construct($dbConfig) // string $dirname, array $config
     {
+
         self::$app = $this;
-        $this->router = new Router([
-            'default_controller' => 'home',
-            'default_method' => 'index'
-        ]);
+        $this->router = new Router();
         $this->view = new View();
+        $this->db = new Database($dbConfig);
     }
 
     public function run(): void
