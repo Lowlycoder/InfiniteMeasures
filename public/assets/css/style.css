@@ -21,7 +21,7 @@ header ul{
     
     
 }
-a{
+#bare_menu ul li a {
     text-decoration: none;
     padding-left: 15px;
     text-align: center;

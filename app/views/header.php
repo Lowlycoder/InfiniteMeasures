@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
     <title>Isanté</title>
 </head>
-<body>
+<body> -->
     <!-- Entête de la page  -->
     <header>
         <div class="logo_Isanté">
-            <a href="#"><img src="./images/Isanté_logo.png" alt="logo" width="200px" height="80px" ></a>
+            <a href="#"><img src="<?= BASE_URL_ASSETS ?>images/Isanté_logo.png" alt="logo" width="200px" height="80px" ></a>
         </div>
         <div id="bare_menu">
             <nav>
@@ -33,7 +33,7 @@
 
         </div>
         <div class="switch_language">
-            <a href="#"><img src="images\French_flag.png" alt="flag" width="30px" height="30px"></a>
+            <a href="#"><img src="<?= BASE_URL_ASSETS ?>images/French_flag.png" alt="flag" width="30px" height="30px"></a>
         </div>
         <div class="connect" style="padding-left:150px;padding-top:13px;">
             <div class="login" style="margin-right:10px;">
@@ -47,6 +47,6 @@
         </div>
         
     </header>    
-    <img src="./images/home_picture.jpg" alt="home_picture" width="100%" height="100%">
-</body>
-</html>
+    <img src="<?= BASE_URL_ASSETS ?>images/home_picture.jpg" alt="home_picture" width="100%" height="100%">
+<!-- </body>
+</html> -->
