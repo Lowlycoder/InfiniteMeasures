@@ -26,4 +26,18 @@ class HomeController extends Controller
         ];
         return $this->render('home', $data);
     }
+
+    public function empreinteCarbone(): string
+    {
+        $data = ['title'=> 'Empreinte Carbone',
+        'head' => "<link href='" . BASE_URL_ASSETS . "css/qcm.css' rel='stylesheet' type='text/css'>"];
+        return $this->render('empreintecarbone', $data);
+    }
+
+    public function qcm(): string
+    {
+        $data = ['title'=> 'QCM',
+        'head' => "<link href='" . BASE_URL_ASSETS . "css/qcm.css' rel='stylesheet' type='text/css'>"];
+        return $this->render('qcm', $data);
+    }
 }
