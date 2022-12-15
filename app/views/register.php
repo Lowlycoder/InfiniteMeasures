@@ -1,7 +1,7 @@
 <div class="container">
     <div class="connect">
         <form action="/register" method="POST">
-            <h1 class="titre">Bienvenue chez ISanté</h1>
+            <h1 class="titre">Bienvenue chez Isanté</h1>
             <br>
             <label for="name">Nom et Prénom</label>
             <input type="text" name="name" id="name" placeholder="John Jones" style="font-size: 1rem" required>
