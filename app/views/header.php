@@ -26,8 +26,8 @@
         </div>
         
         <div class="search_container" > <!-- La bare de recherche -->
-            <form action="#" method="get" id="search_bar" style="background-color:rgb(243, 243, 243);border-radius:2rem;width:200px;padding:0px;">
-                <button type="submit" style="border-radius:50%;border:0;cursor:pointer;"><img src="https://cdn4.iconfinder.com/data/icons/popular-ui/24/04_ui_user_interface_search_magnifying_glass_web_ios-512.png" alt="loop" width="18px" height="15px"></button>
+            <form action="#" method="get" id="search_bar">
+                <button type="submit" id="search-button"><img src="https://cdn4.iconfinder.com/data/icons/popular-ui/24/04_ui_user_interface_search_magnifying_glass_web_ios-512.png" alt="loop" width="18px" height="15px"></button>
                 <input type="text" placeholder="search..." style="background: transparent;flex:1;border:0;outline: none;padding-left:7px;">
             </form>
 
