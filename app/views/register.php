@@ -17,13 +17,13 @@
             </p>
             <br>
             <p>
-                    En créant un compte, vous acceptez les <a href="#" id="CGU">Conditions générales d'utilisation.</a>
+                    En créant un compte, vous acceptez les <a href="/cgu" id="CGU">Conditions générales d'utilisation.</a>
             </p>
             <br>
             <input type="submit" id='submit' value='Créer mon compte' style="font-size: 1rem">
             <br>
                 <p>
-                    Vous avez déjà un compte ? <a href="#" id="signup"><a href="PDG.html">Se connecter à mon compte</a></a>
+                    Vous avez déjà un compte ? <a href="/login">Se connecter à mon compte</a>
                 </p>
         </form>
     </div>
