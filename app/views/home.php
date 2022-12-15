@@ -4,12 +4,12 @@ require("header.php");
 <div class="site-container">
     <img src="<?= BASE_URL_ASSETS ?>images/logo50x50.png" alt="logo"/>
     <h1>
-        <!-- title from our model -->
+        <!-- title from model -->
         <?= $this->escapeHtml($page['info']['title']) ?>
     </h1>
     <div class="section-container">
         <h3>
-            <!-- subtitle from our model -->
+            <!-- subtitle from model -->
             <?= $this->escapeHtml($page['info']['subtitle']) ?>
         </h3>
     </div>

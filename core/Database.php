@@ -17,9 +17,11 @@ class Database
     /** Fetch a single associative array */
     const PDO_FETCH_SINGLE = 'single';
 
-    /** Database connection PDO */
-    private object $_conn;
+    /** Get the affected row count */
+    const PDO_GET_ROW_COUNT = 'count';
 
+    /** Database connection PDO */
+    private PDO $_conn;
     private array $_executeParams;
     private string $_fetchType;
     private string $_sql;
@@ -147,17 +149,20 @@ class Database
      */
     public function runInsertQuery(array $insertData): int
     {
-        $this->_sql = "INSERT INTO $this->_tableName (" . implode(',', array_keys($insertData)) . ') VALUES (' . ':' . implode(', :', array_keys($insertData)) . ')';
+//      e.g. INSERT INTO `users` (`username`, `email`, `password`) VALUES (:username, :email, :password)
+        $this->_sql = "INSERT INTO $this->_tableName (" . implode(',', array_keys($insertData)) . ') VALUES (:' . implode(', :', array_keys($insertData)) . ')';
 
         foreach ($insertData as $column => $value) { // add to prepared statements
             $this->_executeParams[':' . $column] = $value;
         }
         return $this->_runQuery();
     }
-
+    /**
+     * Building a SELECT query requires fetch( Database::PDO_FETCH_SINGLE | Database::PDO_FETCH_MULTI )
+     */
     public function runSelectQuery(string ...$columns): array
     {
-        $select = implode(',', $columns) ?? '*';
+        $select = $columns ? implode(',', $columns) : '*';
         $this->_sql = "SELECT $select FROM $this->_tableName";
         $this->_buildJoin();
         $this->_buildWhere();
@@ -167,12 +172,13 @@ class Database
 
     /**
      * @param array $updateData Array keys are the column names.
-     * @return void
+     * @return int
      */
-    public function runUpdateQuery(array $updateData): void
+    public function runUpdateQuery(array $updateData): int
     {
         $setSql = '';
         $rowCount = 1;
+        $this->_fetchType = Database::PDO_GET_ROW_COUNT;
 
         foreach ($updateData as $column => $value) {
             // add column and column variable to set sql
@@ -184,19 +190,20 @@ class Database
         }
         $this->_sql = "UPDATE $this->_tableName SET $setSql";
         $this->_buildWhere();
-        $this->_runQuery();
+        return $this->_runQuery();
     }
 
-    public function runDeleteQuery(): void
+    public function runDeleteQuery(): int
     {
+        $this->_fetchType = Database::PDO_GET_ROW_COUNT;
         $this->_sql = "DELETE FROM $this->_tableName";
         $this->_buildWhere();
-        $this->_runQuery();
+        return $this->_runQuery();
     }
 
     /**
      * @param string $sql String of the sql to execute. This should contain variables in place of the values.
-     * @param array $params Array of the params. The keys should be the variables in the $sql. The values should be the actual values.
+     * @param array $params Array of the params. The keys should be the :variables in the $sql string.
      * @return array|int
      */
     public function runCustomQuery(string $sql, array $params = []): int|array
@@ -213,12 +220,14 @@ class Database
 
         $pdo->setFetchMode(PDO::FETCH_ASSOC); // set to fetch an array
 
-        $pdo->execute($this->_executeParams);
+        $pdo->execute($this->_executeParams); // execute the query with the prepared statements
 
         if (Database::PDO_FETCH_SINGLE == $this->_fetchType) { // fetching single array
             $result = $pdo->fetch();
         } elseif (Database::PDO_FETCH_MULTI == $this->_fetchType) { // fetch multidimensional array
             $result = $pdo->fetchAll();
+        } elseif (Database::PDO_GET_ROW_COUNT == $this->_fetchType) { // fetch last insert id
+            $result = $pdo->rowCount();
         } else {
             $result = $this->_conn->lastInsertId(); // return last inserted row id
         }
