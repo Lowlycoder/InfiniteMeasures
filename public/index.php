@@ -36,7 +36,7 @@ $dbConfig = [
 $app = new Application($dbConfig);
 
 $app->router->get('/', [HomeController::class, 'index']);
-$app->router->get('/info', [HomeController::class, 'info']);
+$app->router->get('/faq', [HomeController::class, 'faq']);
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
