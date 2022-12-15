@@ -18,35 +18,34 @@
         <div id="bare_menu">
             <nav>
                 <ul>
-                    <li><a href="#">Fun Fact</a></li>
-                    <li><a href="#">FAQ </a></li>
-                    <li><a href="#">Mesurer mon empreinte carbone</a></li>
+                    <li><a href="#" style="text-decoration: none;">Fun Fact</a></li>
+                    <li><a href="#" style="text-decoration: none;">FAQ </a></li>
+                    <li><a href="#" style="text-decoration: none;">Mesurer mon empreinte carbone</a></li>
                 </ul>
             </nav>
         </div>
         
-        <div class="search_container" style="padding:21px 20px;">
+        <div class="search_container" > <!-- La bare de recherche -->
             <form action="#" method="get" id="search_bar" style="background-color:rgb(243, 243, 243);border-radius:2rem;width:200px;padding:0px;">
                 <button type="submit" style="border-radius:50%;border:0;cursor:pointer;"><img src="https://cdn4.iconfinder.com/data/icons/popular-ui/24/04_ui_user_interface_search_magnifying_glass_web_ios-512.png" alt="loop" width="18px" height="15px"></button>
                 <input type="text" placeholder="search..." style="background: transparent;flex:1;border:0;outline: none;padding-left:7px;">
             </form>
 
         </div>
-        <div class="switch_language">
+        <div class="switch_language"> <!-- C'est ici que l'on change la langue de notre site -->
             <a href="#"><img src="<?= BASE_URL_ASSETS ?>images/French_flag.png" alt="flag" width="30px" height="30px"></a>
         </div>
-        <div class="connect" style="padding-left:150px;padding-top:13px;">
-            <div class="login" style="margin-right:10px;">
-                <a href="#" style="color: black;"><p>Log in</p></a>
+        <div class="connect" style="margin:auto 20px auto auto;">
+            <div id="login" style="margin-right:10px;">
+                <a href="#" style="color: black;text-decoration: none;text-align: center;">Log in</a>
             </div>
 
-            <div class="signup">
-                <a href="#" style="color: white;"><p>Sign up</p></a>
+            <div id="signup">
+                <a href="#" style="color: white;text-decoration: none;text-align: center;">Sign up</a>
             </div>
 
         </div>
         
     </header>    
-    <img src="<?= BASE_URL_ASSETS ?>images/home_picture.jpg" alt="home_picture" width="100%" height="100%">
 <!-- </body>
 </html> -->
