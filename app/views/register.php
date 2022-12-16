@@ -3,8 +3,11 @@
         <form action="/register" method="POST">
             <h1 class="titre">Bienvenue chez Isanté</h1>
             <br>
-            <label for="name">Nom et Prénom</label>
-            <input type="text" name="name" id="name" placeholder="John Jones" style="font-size: 1rem" required>
+            <label for="name">Nom</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Jones" style="font-size: 1rem" required>
+
+            <label for="name">Prénom</label>
+            <input type="text" name="firstName" id="firstName" placeholder="John " style="font-size: 1rem" required>
 
             <label for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="example@example.com" style="font-size: 1rem" required>
