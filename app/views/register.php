@@ -1,6 +1,6 @@
 <div class="flex-row">
     <div class="col">
-        <form action="/register" method="POST" class="col">
+        <form action="/register" method="POST">
             <h1>Bienvenue chez Isanté</h1>
             <br>
             <label for="nom">Nom</label>
