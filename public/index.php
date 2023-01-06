@@ -21,6 +21,7 @@ if (ENVIRONMENT == 'development') { // dev environment, display all errors
 
 // autoloader to use classes using namespace instead of require or include
 spl_autoload_register(function ($class) {
+    $class = str_replace('\\', '/', $class);
     if (file_exists("../$class.php")) {
         require_once "../$class.php";
     }

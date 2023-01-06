@@ -10,3 +10,6 @@ vendor/
 
 ##### JetBrains
 .idea/
+
+## php-cs-fixer
+.php-cs-fixer.cache
