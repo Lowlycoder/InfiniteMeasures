@@ -27,9 +27,8 @@ class View
         return ob_get_clean();
     }
 
-    function escapeHtml(string $string): string
+    public function escapeHtml(string $string): string
     {
         return htmlentities($string, ENT_QUOTES, 'UTF-8');
     }
-
 }

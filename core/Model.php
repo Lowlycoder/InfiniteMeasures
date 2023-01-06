@@ -11,7 +11,7 @@ class Model
      * @param string $string string to be escaped for output.
      * @return string that is ready for output to the browser.
      */
-    function escapeHtml(string $string): string
+    public function escapeHtml(string $string): string
     {
         return htmlentities($string, ENT_QUOTES, 'UTF-8');
     }

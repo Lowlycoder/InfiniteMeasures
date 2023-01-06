@@ -16,7 +16,6 @@ class Application
 
     public function __construct($dbConfig) // string $dirname, array $config
     {
-
         self::$app = $this;
         $this->router = new Router();
         $this->view = new View();

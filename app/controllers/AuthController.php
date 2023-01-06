@@ -12,8 +12,7 @@ class AuthController extends Controller
 {
     public function login(): string|null
     {
-        $data = ['title' => 'Login',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/auth.css' rel='stylesheet' type='text/css'>"];
+        $data = ['title' => 'Login'];
         if (Application::$app->router->getMethod() === 'post') {
             echo "checking login";
 //            $loginForm->loadData($request->getBody());
@@ -27,8 +26,13 @@ class AuthController extends Controller
 
     public function register(): string
     {
-        $data = ['title' => 'Signup',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/auth.css' rel='stylesheet' type='text/css'>"];
+        if (Application::$app->router->getMethod() === 'post') {
+            $AuthModel = new AuthModel();
+            if ($AuthModel->register(['nom' => $_POST['nom'], 'prenom' => $_POST['prenom'], 'email' => $_POST['email'], 'passwordHash' => $_POST['password'], 'lastConnection' => ''])) {
+                Application::$app->router->redirect('/login');
+            }
+        }
+        $data = ['title' => 'Signup'];
         return $this->render('register', $data);
     }
 

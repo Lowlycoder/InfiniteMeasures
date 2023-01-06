@@ -47,5 +47,6 @@ $app->router->get('/qcm', [HomeController::class, 'qcm']);
 $app->router->get('/empreinte-carbone', [HomeController::class, 'empreinteCarbone']);
 $app->router->get('/contact', [HomeController::class, 'contact']);
 $app->router->post('/contact', [HomeController::class, 'contact']);
+$app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
 
 $app->run();

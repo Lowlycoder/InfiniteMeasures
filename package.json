@@ -6,11 +6,22 @@
     "prettier": "latest"
   },
   "scripts": {
-    "start:dev": "./node_modules/.bin/browser-sync start --proxy 'localhost/mvc' --files '*'"
+    "start:dev": "./node_modules/.bin/browser-sync start --proxy 'app-g3a' --files '*'"
   },
   "prettier": {
     "printWidth": 120,
     "trailingComma": "all",
-    "tabWidth": 2
+    "tabWidth": 4,
+    "overrides": [
+      {
+        "files": [
+          "*.js",
+          "*.json"
+        ],
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
   }
 }
