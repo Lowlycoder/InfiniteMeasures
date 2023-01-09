@@ -14,13 +14,14 @@ if($conn->connect_error){
     die('Error connecting to database : '.$conn->connect_error);
 }else{
     $stmt=$conn->prepare("INSERT INTO user (nom,prenom,email,passwordHash) VALUES(?,?,?,?)");
-    $stmt->bind_param("ssss",$LastName,$FirstName,$password);
+    $stmt->bind_param("ssss",$LastName,$FirstName,$email,$password);
     if($stmt->execute()==true){
         echo "Your data have been successfully saved !";
     }else{
         echo $conn->error;
     }
     $stmt->close();
+    $conn->close();
 
 }
 
