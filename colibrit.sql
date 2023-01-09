@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `idAdmin` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `prenom` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `email` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `passwordHash` varchar(255) COLLATE utf8mb3_bin NOT NULL,
+  `nom` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prenom` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passwordHash` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`idAdmin`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `boitier` (
   `User_idUser` int NOT NULL,
   PRIMARY KEY (`idboitier`,`User_idUser`),
   KEY `fk_boitier_User1_idx` (`User_idUser`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `capteur` (
   PRIMARY KEY (`idcapteur`,`typeCapteur_idTypeCapteur`,`boitier_idboitier`),
   KEY `fk_capteur_typeCapteur1_idx` (`typeCapteur_idTypeCapteur`),
   KEY `fk_capteur_boitier1_idx` (`boitier_idboitier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `data` (
   `capteur_idcapteur` int NOT NULL,
   PRIMARY KEY (`idData`,`capteur_idcapteur`),
   KEY `fk_data_capteur1_idx` (`capteur_idcapteur`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -94,10 +94,10 @@ CREATE TABLE IF NOT EXISTS `data` (
 DROP TABLE IF EXISTS `faq`;
 CREATE TABLE IF NOT EXISTS `faq` (
   `idFAQ` int NOT NULL AUTO_INCREMENT,
-  `question` varchar(255) COLLATE utf8mb3_bin NOT NULL,
+  `question` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `reponse` multilinestring NOT NULL,
   PRIMARY KEY (`idFAQ`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -108,11 +108,11 @@ CREATE TABLE IF NOT EXISTS `faq` (
 DROP TABLE IF EXISTS `typecapteur`;
 CREATE TABLE IF NOT EXISTS `typecapteur` (
   `idTypeCapteur` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) COLLATE utf8mb3_bin NOT NULL,
+  `nom` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `max` int DEFAULT NULL,
   `min` int DEFAULT NULL,
   PRIMARY KEY (`idTypeCapteur`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -123,17 +123,13 @@ CREATE TABLE IF NOT EXISTS `typecapteur` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `idUser` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `prenom` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `email` varchar(45) COLLATE utf8mb3_bin NOT NULL,
-  `passwordHash` varchar(255) COLLATE utf8mb3_bin NOT NULL,
+  `nom` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prenom` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passwordHash` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastConnection` datetime NOT NULL,
   PRIMARY KEY (`idUser`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
-
---
--- Constraints for dumped tables
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Constraints for table `boitier`
