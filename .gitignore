@@ -1,5 +1,6 @@
 ## modules
 node_modules/
+vendor/
 
 ## text editors
 ##### VisualStudioCode
@@ -9,3 +10,6 @@ node_modules/
 
 ##### JetBrains
 .idea/
+
+## php-cs-fixer
+.php-cs-fixer.cache

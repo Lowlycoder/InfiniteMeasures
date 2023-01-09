@@ -21,6 +21,7 @@ if (ENVIRONMENT == 'development') { // dev environment, display all errors
 
 // autoloader to use classes using namespace instead of require or include
 spl_autoload_register(function ($class) {
+    $class = str_replace('\\', '/', $class);
     if (file_exists("../$class.php")) {
         require_once "../$class.php";
     }
@@ -47,5 +48,6 @@ $app->router->get('/qcm', [HomeController::class, 'qcm']);
 $app->router->get('/empreinte-carbone', [HomeController::class, 'empreinteCarbone']);
 $app->router->get('/contact', [HomeController::class, 'contact']);
 $app->router->post('/contact', [HomeController::class, 'contact']);
+$app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
 
 $app->run();

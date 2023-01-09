@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index(): string
     {
         $homeModel = new HomeModel();
-        $data = ['title' => 'home',
+        $data = ['title' => 'Accueil',
             'page' => $homeModel->getPageText()];
         $data['description_html'] = $homeModel->getViewHtml('html_description', $data);
 
@@ -42,7 +42,7 @@ class HomeController extends Controller
 //                'Reply-To' => $_POST['email'],
 //                'content-type' => 'text/html'
 //            );   // Le header est un paramètre de la fonction mail qui contient entêtes
-//        
+//
 //            $sentMail=mail($to,$subject,$message,$headers);
 //            if(!empty($_POST['message']) ) {
 //                if($sentMail){
@@ -53,30 +53,31 @@ class HomeController extends Controller
 //            }
 //        }
 
-        $data = ['title' => 'Contact',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/contact.css' rel='stylesheet' type='text/css'>"];
-
+        $data = ['title' => 'Contact'];
         return $this->render('contact', $data);
     }
 
     public function cgu(): string
     {
-        $data = ['title'=> 'Conditions générales d\'utilisations',
-        'head' => "<link href='" . BASE_URL_ASSETS . "css/qcm.css' rel='stylesheet' type='text/css'>"];
+        $data = ['title' => 'Conditions générales d\'utilisations'];
         return $this->render('cgu', $data);
     }
 
     public function empreinteCarbone(): string
     {
-        $data = ['title'=> 'Empreinte Carbone',
-        'head' => "<link href='" . BASE_URL_ASSETS . "css/qcm.css' rel='stylesheet' type='text/css'>"];
+        $data = ['title' => 'Empreinte Carbone'];
         return $this->render('empreintecarbone', $data);
     }
 
     public function qcm(): string
     {
-        $data = ['title'=> 'QCM',
-        'head' => "<link href='" . BASE_URL_ASSETS . "css/qcm.css' rel='stylesheet' type='text/css'>"];
+        $data = ['title' => 'QCM'];
         return $this->render('qcm', $data);
+    }
+
+    public function funFacts(): string
+    {
+        $data = ['title' => 'Fun Facts'];
+        return $this->render('funFacts', $data);
     }
 }

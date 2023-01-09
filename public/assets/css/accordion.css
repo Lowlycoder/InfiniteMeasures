@@ -1,57 +1,69 @@
 .accordion {
-  width: 100%;
+    width: 100%;
 }
+
 .accordion-item {
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid darkgray;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid darkgray;
 }
+
 .accordion-body {
-  max-height: 0;
-  padding: 0 1em;
-  transition: all 0.35s;
+    max-height: 0;
+    padding: 0 1em;
+    transition: all 0.35s;
 }
+
 .accordion-item > label {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-  font-weight: bold;
-  cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bold;
+    cursor: pointer;
 }
+
 .accordion-item > label::after {
-  content: "\276F";
-  transform: rotate(90deg);
-  text-align: center;
-  transition: all 0.35s;
+    content: "\276F";
+    transform: rotate(90deg);
+    text-align: center;
+    transition: all 0.35s;
 }
+
 .accordion-item > input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
 }
+
 .accordion-item > input:checked + label {
-  background: var(--blue);
-  border-bottom: 1px solid darkgray;
+    background: var(--blue);
+    border-bottom: 1px solid darkgray;
 }
+
 .accordion-item > input:checked + label::after {
-  transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
+
 .accordion-item > input:checked ~ .accordion-body {
-  max-height: 100vh;
-  padding: 1rem;
+    max-height: 100vh;
+    padding: 1rem;
 }
+
 .accordion-item:first-of-type {
-  border-top-left-radius: 0.375rem;
-  border-top-right-radius: 0.375rem;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
 }
+
 .accordion-item:not(:first-of-type) {
-  border-top: 0;
+    border-top: 0;
 }
+
 .accordion-item:last-of-type {
-  border-bottom-right-radius: 0.375rem;
-  border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
 }
+
 .accordion-item:last-of-type .accordion-collapse {
-  border-bottom-right-radius: 0.375rem;
-  border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
 }

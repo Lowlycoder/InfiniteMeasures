@@ -1,48 +1,126 @@
 @charset "utf-8";
 
 :root {
-  --blue: #88CAF0;
+    --blue: #88CAF0;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Ubuntu', 'Helvetica', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: #43b047;
-    font-size: 18px;
+    color: var(--blue);
 }
 
 a:hover {
     text-decoration: underline;
+    color: black;
 }
 
-body {
-    /*background: #181818;*/
-    font-family: 'Ubuntu', 'Helvetica', sans-serif;
-    /*color: #ffffff;*/
-    margin: 0;
-    padding: 0;
-    /*font-size: 12px;*/
+footer {
+    background-color: var(--blue);
+    padding: .75rem .75rem 0;
+    text-align: center;
 }
 
-.info-text-heading-bar {
-    /*color: #e3e3e3;*/
-    font-size: 18px;
-    font-weight: bold;
+.footer-container a {
+    color: white;
 }
 
-#info-text-toggle {
-    float: right;
-    /*color: #aaaaaa;*/
-    font-size: 12px;
+.footer-container a:hover {
+    color: black;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    min-width: 200px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:disabled, textarea:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+textarea {
+    resize: vertical;
+}
+
+[type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
 }
 
-.info-text {
-    margin-top: 5px;
+button {
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    border-radius: 50rem;
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.section-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+.button {
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+    border-radius: 50rem;
+    color: white;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    padding: 0.75rem 1rem;
+    display: inline-block;
+}
+
+.button:hover, button:hover {
+    background-color: white;
+    color: black;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.float-start {
+    float: left !important;
+}
+
+.float-end {
+    float: right !important;
 }
 
 .container,
@@ -60,41 +138,139 @@ body {
 }
 
 @media (min-width: 576px) {
+    .col-sm {
+        flex: 1 0 0%;
+    }
+
     .container-sm, .container {
         max-width: 540px;
     }
+
+    .d-sm-flex {
+        display: flex !important;
+    }
+
 }
 
 @media (min-width: 768px) {
+    .col-md {
+        flex: 1 0 0%;
+    }
+
     .container-md, .container-sm, .container {
         max-width: 720px;
+    }
+
+    .d-md-flex {
+        display: flex !important;
     }
 }
 
 @media (min-width: 992px) {
+    .col-lg {
+        flex: 1 0 0%;
+    }
+
     .container-lg, .container-md, .container-sm, .container {
         max-width: 960px;
+    }
+
+    .d-lg-flex {
+        display: flex !important;
     }
 }
 
 @media (min-width: 1200px) {
+    .col-xl {
+        flex: 1 0 0%;
+    }
+
     .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 1140px;
+    }
+
+    .d-xl-flex {
+        display: flex !important;
     }
 }
 
 @media (min-width: 1400px) {
+    .col-xxl {
+        flex: 1 0 0%;
+    }
+
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 1320px;
+    }
+
+    .d-xxl-flex {
+        display: flex !important;
     }
 }
 
 .flex-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap !important;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column wrap !important;
 }
 
 .col {
     flex: 1;
     padding: 0 10px;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.align-self-auto {
+    align-self: auto !important;
+}
+
+.align-self-start {
+    align-self: flex-start !important;
+}
+
+.align-self-end {
+    align-self: flex-end !important;
+}
+
+.align-self-center {
+    align-self: center !important;
+}
+
+.align-self-baseline {
+    align-self: baseline !important;
+}
+
+.align-self-stretch {
+    align-self: stretch !important;
 }

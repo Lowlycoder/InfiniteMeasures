@@ -12,13 +12,13 @@ use PDOException;
 class Database
 {
     /** Fetch multiple rows */
-    const PDO_FETCH_MULTI = 'multi';
+    public const PDO_FETCH_MULTI = 'multi';
 
     /** Fetch a single associative array */
-    const PDO_FETCH_SINGLE = 'single';
+    public const PDO_FETCH_SINGLE = 'single';
 
     /** Get the affected row count */
-    const PDO_GET_ROW_COUNT = 'count';
+    public const PDO_GET_ROW_COUNT = 'count';
 
     /** Database connection PDO */
     private PDO $_conn;
@@ -41,7 +41,6 @@ class Database
             $this->_conn = new PDO("mysql:host={$database['hostname']};dbname={$database['database']}", $database['username'], $database['password']);
             $this->_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // set PDO to return errors
             $this->_initialize();
-
         } catch (PDOException $e) { // if database connection failed
             die($e->getMessage());
         }
@@ -109,7 +108,9 @@ class Database
 
     private function _buildJoin(): void
     {
-        if (!$this->_join) return;
+        if (!$this->_join) {
+            return;
+        }
 
         foreach ($this->_join as $join) {
             $this->_sql .= ' ' . strtoupper($join['type']) . " JOIN {$join['table']} ON ( {$join['on']} )";
@@ -118,7 +119,9 @@ class Database
 
     private function _buildWhere(): void
     {
-        if (!$this->_where) return;
+        if (!$this->_where) {
+            return;
+        }
 
         $this->_sql .= ' WHERE';
         foreach ($this->_where as $where) {
@@ -157,6 +160,7 @@ class Database
         }
         return $this->_runQuery();
     }
+
     /**
      * Building a SELECT query requires fetch( Database::PDO_FETCH_SINGLE | Database::PDO_FETCH_MULTI )
      */
