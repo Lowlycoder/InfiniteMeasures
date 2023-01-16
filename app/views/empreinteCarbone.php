@@ -1,7 +1,7 @@
 <img src="https://www.meilleurtauxpro.com/images/actu/2020/0812_empreinte-carbone.jpg" alt="footprint carbon"
      style="width: 100%">
 <div class="container">
-    <h2 class="text-blue">L’empreinte carbone :<br>Qu'est-ce que c’est, comment la calculer et la réduire ?</h2>
+    <h2 class="text-blue">L’empreinte carbone, qu'est-ce que c’est, comment la calculer et la réduire ?</h2>
     <p>Ces dernières années, on entend très souvent les termes “empreinte carbone” ou “bilan carbone”, ils reviennent à
         toutes les sauces et dans tous les contextes. Isanté vous aide à comprendre des termes importants pour la
         compréhension globale de cette thématique comme « GES », « effet de serre » ou « tonne équivalent carbone »<br>
@@ -10,7 +10,7 @@
         Enfin nous vous proposerons des solutions concrètes et qui font la différence pour réduire votre impact sur
         l’environnement.
     </p>
-    <a href="/qcm" class="button">Faire le QCM</a>
+    <a href="/qcm" class="button">Mesurer mon empreinte carbone</a>
     <h2 class="text-blue">Empreinte carbone, bilan carbone et empreinte écologique… Comment s’y retrouver ?</h2>
     <p> L’empreinte écologique (ou empreinte environnementale) est un indicateur de l’effet des activités humaines sur
         la
@@ -28,4 +28,12 @@
         (bois de chauffe, pâte à papier et produits dérivés du bois)<br>
         L’impact des pâturages et cultures (nourriture humaine et animale, textiles)<br>
     </p>
+    <h2 class="text-blue">Comment réduire son empreinte carbone</h2>
+    <p>- Effectuer des améliorations domestiques pour l'utilisation de l'énergie: Remplacez vos ampoules standards par des ampoules compactes fluorescentes, travaillez sur l'isolation de votre maison, faites attention avec vos appareils électroniques, 
+envisagez des formes alternatives d'énergie, par exemple l'énergie solaire, hydraulique et éolienne. </p>
+    <p>- Prendre de bonnes habitudes alimentaires pour économiser l'énergie : Achetez des produits locaux, créez votre propre jardin, </p>
+<p>- Effectuer des voyages à basse consommation d'énergie: Trouvez des moyens de locomotion plus écologiques, conduisez moins, faites vérifier votre voiture régulièrement</p>
+<p>- Réutiliser et recycler</p>
+<p>- Réduire sa consommation d'eau</p>
+
 </div>

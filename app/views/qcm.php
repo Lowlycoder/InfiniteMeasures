@@ -1,6 +1,7 @@
 <div class="container my-3">
     <form class="flex-column">
         <div style="column-count: 2">
+        <div>
             <h2>Logement</h2>
             <h4 class="mb-1">Dans quel type de logement habitez-vous ?</h4>
             <input type="radio" id="appartement" name="habitat" value="Appartement">
@@ -74,10 +75,7 @@
             <label for="résidus_parfois">Parfois</label><br>
             <input type="radio" id="résidus_non" name="résidus" value="Résidus_non">
             <label for="résidus_non">Non</label><br>
-        </div>
-        <a href="#" class="button align-self-end">Suivant</a>
-        <hr>
-        <div style="column-count: 2">
+        
             <h2> Achat</h2>
             <h4 class="mb-1">Achetez-vous des appareils reconditionnés</h4>
             <input type="radio" id="reconditionné_oui" name="reconditionné" value="Reconditionné_oui">
@@ -86,6 +84,7 @@
             <label for="reconditionné_parfois">Parfois</label><br>
             <input type="radio" id="reconditionné_non" name="reconditionné" value="Reconditionné_non">
             <label for="reconditionné_non">Non</label><br>
+        </div>
 
             <h4 class="mb-1">Combien de fois achetez-vous de nouveaux vêtements par an ?</h4>
             <input type="radio" id="1_fois" name="shopping" value="1fois">
@@ -163,7 +162,6 @@
             <input type="radio" id="plus_50" name="nour_poubelle" value="Plus_50%">
             <label for="plus_50">Plus de 50%</label><br>
         </div>
-        <a href="#" class="button align-self-start">Retour</a>
         <a href="#" class="button align-self-end">Voir les résultats</a>
     </form>
 </div>
