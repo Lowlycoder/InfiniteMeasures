@@ -2,30 +2,30 @@
 
 // Variables
 
-$FirstName= $_POST["firstName"];
-$LastName= $_POST["lastName"];
-$email= $_POST["email"];
-$password= $_POST["password"];
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-// Connexion to the database
+    $FirstName= $_POST["firstName"];
+    $LastName= $_POST["lastName"];
+    $email= $_POST["email"];
+    $password= $_POST["password"];
 
-$conn= mysqli_connect('localhost','root','root','colibrit','3306');
-if($conn->connect_error){
-    die('Error connecting to database : '.$conn->connect_error);
-}else{
-    $stmt=$conn->prepare("INSERT INTO user (nom,prenom,email,passwordHash) VALUES(?,?,?,?)");
-    $stmt->bind_param("ssss",$LastName,$FirstName,$email,$password);
-    if($stmt->execute()==true){
-        echo "Your data have been successfully saved !";
+    // Connexion to the database
+    $conn= mysqli_connect('localhost','root','','colibrit','3306');
+
+    if($conn->connect_error){
+        die('Error connecting to database : '.$conn->connect_error);
     }else{
-        echo $conn->error;
+        $stmt=$conn->prepare("INSERT INTO user (nom,prenom,email,passwordHash) VALUES(?,?,?,?)");
+        $stmt->bind_param("ssss",$LastName,$FirstName,$email,$password);
+        if($stmt->execute()==true){
+            echo "Your data have been successfully saved !";
+        }else{
+            echo $conn->error;
+        }
+        $stmt->close();
+        $conn->close();
+
     }
-    $stmt->close();
-    $conn->close();
-
 }
-
-
-
 
 ?>
