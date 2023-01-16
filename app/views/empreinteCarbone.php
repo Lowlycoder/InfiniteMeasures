@@ -4,7 +4,7 @@
     <h2 class="text-blue">L’empreinte carbone, qu'est-ce que c’est, comment la calculer et la réduire ?</h2>
     <p>Ces dernières années, on entend très souvent les termes “empreinte carbone” ou “bilan carbone”, ils reviennent à
         toutes les sauces et dans tous les contextes. Isanté vous aide à comprendre des termes importants pour la
-        compréhension globale de cette thématique comme « GES », « effet de serre » ou « tonne équivalent carbone »<br>
+        compréhension globale de cette thématique comme « effet de serre » ou « tonne équivalent carbone »<br>
         Ensuite nous entrerons dans le vif du sujet en décortiquant les concepts d’empreinte carbone, empreinte
         écologique et bilan carbone. Vous pouvez également calculer votre empreinte carbone et voir vos résultats.<br>
         Enfin nous vous proposerons des solutions concrètes et qui font la différence pour réduire votre impact sur
@@ -28,12 +28,13 @@
         (bois de chauffe, pâte à papier et produits dérivés du bois)<br>
         L’impact des pâturages et cultures (nourriture humaine et animale, textiles)<br>
     </p>
-    <h2 class="text-blue">Comment réduire son empreinte carbone</h2>
-    <p>- Effectuer des améliorations domestiques pour l'utilisation de l'énergie: Remplacez vos ampoules standards par des ampoules compactes fluorescentes, travaillez sur l'isolation de votre maison, faites attention avec vos appareils électroniques, 
-envisagez des formes alternatives d'énergie, par exemple l'énergie solaire, hydraulique et éolienne. </p>
-    <p>- Prendre de bonnes habitudes alimentaires pour économiser l'énergie : Achetez des produits locaux, créez votre propre jardin, </p>
-<p>- Effectuer des voyages à basse consommation d'énergie: Trouvez des moyens de locomotion plus écologiques, conduisez moins, faites vérifier votre voiture régulièrement</p>
-<p>- Réutiliser et recycler</p>
-<p>- Réduire sa consommation d'eau</p>
+    <h2 class="text-blue">Comment réduire son empreinte carbone ?</h2>
+    <p>- Effectuer des améliorations domestiques pour réduire les coûts d'énergie: Travaillez sur l'isolation de votre maison, faites attention aux appareils électroniques, 
+        envisagez des formes alternatives d'énergie, par exemple les énergies renouvelables.
+    </p>
+    <p>- Avoir de bonnes habitudes alimentaires : Achetez des produits locaux, créer un  potager </p>
+    <p>- Faire des voyages à basse consommation d'énergie: Trouvez des moyens de déplacements plus écologiques, conduisez moins, faites vérifier votre voiture régulièrement</p>
+    <p>- Utiliser du reconditionné, faire du recyclage</p>
+    <p>- Réduire sa consommation d'eau</p>
 
 </div>
