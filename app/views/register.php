@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<div class="container">
+
+<div class="container-input">
     <div class="connect">
         <form action="./Processing.php" method="POST">
             <h1 class="titre">Bienvenue chez Isanté</h1>
