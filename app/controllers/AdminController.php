@@ -10,7 +10,7 @@ class AdminController extends Controller
     public function admin(): string
     {
         $data = ['title' => 'AdminPanel',
-        'head' => "<link href='" . BASE_URL_ASSETS . "css/accordion.css' rel='stylesheet' type='text/css'>"];
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/adminPanel.css' rel='stylesheet' type='text/css'>"];
 
         return $this->render('adminPanel', $data);
     }

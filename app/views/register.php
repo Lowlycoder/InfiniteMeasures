@@ -1,7 +1,6 @@
-
 <div class="container-input">
     <div class="connect">
-        <form action="./Processing.php" method="POST">
+        <form action="/register" method="post">
             <h1 class="titre">Bienvenue chez Isanté</h1>
             <br>
             <label for="name">Nom</label>
