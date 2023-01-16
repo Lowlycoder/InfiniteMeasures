@@ -8,7 +8,6 @@
     <title>adminPanel</title>
 </head>
 
-
 <body>
     <div id="side-menu">
         <div id="brand-name">
