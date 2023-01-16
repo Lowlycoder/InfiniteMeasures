@@ -21,3 +21,27 @@
         <img src="<?= BASE_URL_ASSETS; ?>images/img.webp" alt="image" style="height:100%;width:100%">
     </div>
 </div>
+
+<?php 
+
+// connexion to the database...
+// $conn = mysqli_connect("localhost","root","","colibrit");
+
+// if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+//     $adminMail=$_POST['email'];
+//     $adminPassword=$_POST['password'];
+
+// }
+
+// $sql = "SELECT * FROM admin WHERE email='admin@mail.com' AND password='nimda110' ";
+// $result = $conn->query($sql);
+// $row = mysqli_fetch_array($result);
+
+// if($row['email'] == "admin@mail.com"){
+//     header("location:.views/adminPanel.php");
+// }else{
+//     echo "Insert the right input !";
+// }
+
+?>
