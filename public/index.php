@@ -59,5 +59,6 @@ $app->router->post('/contact', [HomeController::class, 'contact']);
 $app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
 
 $app->router->get('/admin/login', [AuthController::class, 'adminLogin']);
+$app->router->get('/admin', [AdminController::class, 'admin']);
 
 $app->run();
