@@ -2,7 +2,8 @@
 
 use app\controllers\AuthController;
 use core\Application;
-use app\Controllers\HomeController;
+use app\controllers\HomeController;
+use app\controllers\AdminController;    
 
 defined('ENVIRONMENT') or define('ENVIRONMENT', 'development');
 defined('PROTOCOL') or define('PROTOCOL', isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://' : 'http://');
@@ -49,5 +50,8 @@ $app->router->get('/empreinte-carbone', [HomeController::class, 'empreinteCarbon
 $app->router->get('/contact', [HomeController::class, 'contact']);
 $app->router->post('/contact', [HomeController::class, 'contact']);
 $app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
+
+$app->router->get('/admin', [AdminController::class, 'admin']);
+
 
 $app->run();
