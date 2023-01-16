@@ -274,3 +274,9 @@ p {
 .align-self-stretch {
     align-self: stretch !important;
 }
+
+.container-input{
+    display: flex;
+    flex-direction: row;
+}
+
