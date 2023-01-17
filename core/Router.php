@@ -69,7 +69,7 @@ class Router
         } elseif (is_array($callback)) {
             $callback[0] = new $callback[0]();
             echo "<pre>";
-            var_dump($callback);
+            // var_dump($callback);
             echo "</pre>";
         }
 

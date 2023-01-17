@@ -2,16 +2,18 @@
     <div id="brand-name">
         <h1>Panel</h1>
     </div>
+    // Bare de menu de la page admin
     <ul>
-        <li><a href="#"><img src="<?= BASE_URL_ASSETS ?>images/dashboard.png" alt="" width="35px" height="35px">Dashboard</a></li>
-        <li><a href="#"><i class="fa-regular fa-user fa-2x"></i>Users</a></li>
-        <li><a href="#"><img src="<?= BASE_URL_ASSETS ?>images/capteur.png" alt="" width="40px" height="40px">&nbsp;<span>Capteurs</span></a></li>
-        <li><a href="#"><i class="fa-solid fa-chart-pie fa-2x"></i>Statistiques</a></li>
+        <li><a href="/admin/adminPanel"><img src="<?= BASE_URL_ASSETS ?>images/dashboard.png" alt="" width="35px" height="35px">Dashboard</a></li>
+        <li><a href="/admin/tableUser"><i class="fa-regular fa-user fa-2x"></i>Users</a></li>
+        <li><a href="/admin/captors"><img src="<?= BASE_URL_ASSETS ?>images/capteur.png" alt="" width="40px" height="40px">&nbsp;<span>Capteurs</span></a></li>
+        <li><a href="/admin/Statistics"><i class="fa-solid fa-chart-pie fa-2x"></i>Statistiques</a></li>
     </ul>
 </div>
-</div>
+
 
 <div class="container-header">
+    // Header de la page admin
     <div class="header">
         <div class="nav">
             <div class="search">
@@ -38,7 +40,6 @@
                 </div>
                 <div class="case">
                     <img src="<?= BASE_URL_ASSETS ?>images/user-c.jpg" alt="" width="100px" height="100px">
-                    <img src="<?= BASE_URL_ASSETS ?>images/user-c.jpg" alt="" width="100px" height="100px">
                 </div>
             </div>
 
@@ -48,7 +49,6 @@
                     <h3>Capteurs</h3>
                 </div>
                 <div class="case">
-                    <img src="<?= BASE_URL_ASSETS ?>images/captor.png" alt="" width="100px" height="100px">
                     <img src="<?= BASE_URL_ASSETS ?>images/captor.png" alt="" width="100px" height="100px">
                 </div>
             </div>
@@ -60,13 +60,11 @@
                 </div>
                 <div class="case">
                     <img src="<?= BASE_URL_ASSETS ?>images/income.jpg" alt="" width="100px" height="100px">
-                    <img src="<?= BASE_URL_ASSETS ?>images/income.jpg" alt="" width="100px" height="100px">
                 </div>
             </div>
         </div>
 
         <div id="content2">
-
             <div id="content-payment">
 
                 <div class="title-table">
