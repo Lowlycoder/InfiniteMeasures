@@ -3,13 +3,12 @@
         <h1>Panel</h1>
     </div>
     <ul>
-        <li><a href="#"><img src="<?= BASE_URL_ASSETS ?>images/dashboard.png" alt="" width="35px"
-                             height="35px">Dashboard</a></li>
-        <li><a href="#"><i class="fa-regular fa-user fa-2x"></i>Users</a></li>
-        <li><a href="#"><img src="<?= BASE_URL_ASSETS ?>images/capteur.png" alt="" width="40px"
-                             height="40px">&nbsp;<span>Capteurs</span></a></li>
-        <li><a href="#"><i class="fa-solid fa-chart-pie fa-2x"></i>Statistiques</a></li>
+        <li><a href="#"><img src="images\dashboard.png" alt="" width="35px" height="35px">&nbsp;<span>Dashboard</span></a></li>
+        <li><a href="#"><img src="images\uuser.png" alt="" width="35px" height="35px">&nbsp;<span>Users</span></a></li>
+        <li><a href="#"><img src="images\capteur.png" alt="" width="40px" height="40px">&nbsp;<span>Capteurs</span></a></li>
+        <li><a href="#"><img src="images\stat.png" alt="" width="40px" height="40px">&nbsp;<span>Statistiques</span></a></li>
     </ul>
+</div>
 </div>
 
 <div class="container-header">
@@ -17,13 +16,13 @@
         <div class="nav">
             <div class="search">
                 <input type="text" placeholder="Search..">
-                <button type="submit"><img src="<?= BASE_URL_ASSETS ?>images/search.png" alt=""></button>
+                <button type="submit"><img src="images\search.png" alt=""></button>
             </div>
             <div class="user-connect">
                 <a href="#" class="btn">Add New</a>
-                <img src="<?= BASE_URL_ASSETS ?>images/sonnette.jpg" alt="">
+                <img src="images\sonnette.jpg" alt="">
                 <div class="img-case" style="color:black;">
-                    <img src="<?= BASE_URL_ASSETS ?>images/user-b.jpg" alt="">
+                    <img src="user-b.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -64,7 +63,9 @@
         </div>
 
         <div id="content2">
+
             <div id="content-payment">
+
                 <div class="title-table">
                     <h2>Recent payment</h2>
                     <a href="#" class="btn">View all</a>
@@ -76,26 +77,35 @@
                         <th>Amount</th>
                         <th>Option</th>
                     </tr>
+
                     <tr>
                         <td>Joul cat</td>
                         <td>St. James College</td>
                         <td>€120</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
+
                     <tr>
                         <td>John Doe</td>
                         <td>St. James College</td>
                         <td>€120</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
+
                     <tr>
                         <td>Moul Jay</td>
                         <td>St. James College</td>
                         <td>€120</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
+
                 </table>
+
             </div>
+
         </div>
+
+
     </div>
+
 </div>
