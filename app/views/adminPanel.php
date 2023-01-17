@@ -9,19 +9,20 @@
         <li><a href="#"><i class="fa-solid fa-chart-pie fa-2x"></i>Statistiques</a></li>
     </ul>
 </div>
+</div>
 
 <div class="container-header">
     <div class="header">
         <div class="nav">
             <div class="search">
                 <input type="text" placeholder="Search..">
-                <button type="submit"><img src="<?= BASE_URL_ASSETS ?>images/search.png" alt=""></button>
+                <button type="submit"><img src="images\search.png" alt=""></button>
             </div>
             <div class="user-connect">
                 <a href="#" class="btn">Add New</a>
-                <img src="<?= BASE_URL_ASSETS ?>images/sonnette.jpg" alt="">
+                <img src="images\sonnette.jpg" alt="">
                 <div class="img-case" style="color:black;">
-                    <img src="<?= BASE_URL_ASSETS ?>images/user-b.jpg" alt="">
+                    <img src="user-b.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -65,7 +66,9 @@
         </div>
 
         <div id="content2">
+
             <div id="content-payment">
+
                 <div class="title-table">
                     <h2>Recent payment</h2>
                     <a href="#" class="btn">View all</a>
@@ -77,26 +80,35 @@
                         <th>Amount</th>
                         <th>Option</th>
                     </tr>
+
                     <tr>
                         <td>Joul cat</td>
                         <td>St. James College</td>
                         <td>€120</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
+
                     <tr>
                         <td>John Doe</td>
                         <td>St. James College</td>
                         <td>€120</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
+
                     <tr>
                         <td>Moul Jay</td>
                         <td>St. James College</td>
                         <td>€120</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
+
                 </table>
+
             </div>
+
         </div>
+
+
     </div>
+
 </div>
