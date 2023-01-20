@@ -17,14 +17,11 @@ class Controller
         return Application::$app->view->renderView($view, $params);
     }
 
-//    /**
-//     * @param string $viewFile view file path in app/views
-//     * @param $data
-//     * @return void
-//     */
-//    public function loadView(string $viewFile, $data): void
+//    public function checkAdmin(): bool
 //    {
-//        extract($data); // convert array key/values to individual php variables for the view
-//        require_once __DIR__ . "/../app/views/$viewFile.php";
+//        if (Application::$app->session->get('admin') === true) {
+//            return true;
+//        }
+//        return false;
 //    }
 }
