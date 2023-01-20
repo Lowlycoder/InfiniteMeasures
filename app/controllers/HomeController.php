@@ -92,4 +92,32 @@ class HomeController extends Controller
 
         return $this->render('funFacts', $data);
     }
-}
+
+    public function user(): string
+    {
+        $data = [
+            'title' => 'Tableau de bord',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>"
+        ];
+        return $this->render('user', $data);
+    }
+
+    public function capteursUser(): string
+    {
+        $data = [
+            'title' => 'capteurs',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>"
+        ];
+        return $this->render('capteursUser', $data);
+    }
+    public function reglages(): string
+    {
+        $data = [
+            'title' => 'reglages',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>"
+        ];
+        return $this->render('reglages', $data);
+    }
