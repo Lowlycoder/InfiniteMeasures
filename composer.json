@@ -1,0 +1,21 @@
+{
+  "name": "colibrit/app",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Benjamin Bordes",
+      "email": "benjaminbordes78@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*",
+    "phpmailer/phpmailer": "^6.7"
+  },
+  "scripts": {
+    "fix-cs": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix -v",
+    "start:dev": [
+      "Composer\\Config::disableProcessTimeout",
+      "./node_modules/.bin/browser-sync start --proxy app-g3a --files app public --no-open"
+    ]
+  }
+}

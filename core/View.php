@@ -2,8 +2,6 @@
 
 namespace core;
 
-use core\Model;
-
 class View
 {
     public function renderView($view, array $params): array|bool|string
@@ -15,7 +13,8 @@ class View
 
         extract($params);
         ob_start();
-        include_once __DIR__ . "/../app/views/$layoutName.php";
+        include_once __DIR__."/../app/views/$layoutName.php";
+
         return str_replace('{{content}}', $this->renderViewOnly($view, $params), ob_get_clean());
     }
 
@@ -23,7 +22,8 @@ class View
     {
         extract($params); // convert array key/values to individual php variables for the view
         ob_start();
-        include_once __DIR__ . "/../app/views/$view.php";
+        include_once __DIR__."/../app/views/$view.php";
+
         return ob_get_clean();
     }
 

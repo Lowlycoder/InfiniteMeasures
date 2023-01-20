@@ -2,10 +2,6 @@
 
 namespace core;
 
-use core\Controller;
-use core\Router;
-use core\View;
-
 class Application
 {
     public static Application $app;

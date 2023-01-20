@@ -28,7 +28,8 @@ class Model
         // convert data array key/values to individual variables for the view
         extract($data);
         ob_start(); // start output buffer
-        require_once __DIR__ . "/../app/views/$viewFile.php"; // load the specified view
+        require_once __DIR__."/../app/views/$viewFile.php"; // load the specified view
+
         return ob_get_clean(); // return output buffer contents and clear buffer
     }
 }
