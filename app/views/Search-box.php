@@ -73,11 +73,11 @@
         <h1>Panel</h1>
     </div>
     <ul>
-        <li><a href="#"><img src="dashboard.png" alt="" width="35px" height="35px">&nbsp;<span>Dashboard</span></a></li>
-        <li><a href="#"><img src="uuser.png" alt="" width="35px" height="35px">&nbsp;<span>Utilisateur</span></a></li>
-        <li><a href="#"><img src="capteur.png" alt="" width="40px" height="40px">&nbsp;<span>Capteurs</span></a></li>
-        <li><a href="#"><img src="stat.png" alt="" width="40px" height="40px">&nbsp;<span>Statistiques</span></a></li>
-        <li><a href="#"><img src="stat.png" alt="" width="40px" height="40px">&nbsp;<span>Recherche</span></a></li>
+        <li><a href="/admin/adminPanel"><img src="<?= BASE_URL_ASSETS ?>images/dashboard.png" alt="" width="35px" height="35px">&nbsp;<span>Dashboard</span></a></li>
+        <li><a href="/admin/tableUser"><i class="fa-regular fa-user fa-2x">&nbsp;</i>Users</a></li>
+        <li><a href="/admin/captors"><img src="<?= BASE_URL_ASSETS ?>images/capteur.png" alt="" width="40px" height="40px">&nbsp;<span>Capteurs</span></a></li>
+        <li><a href="/admin/Statistics"><i class="fa-solid fa-chart-pie fa-2x">&nbsp;</i>Statistiques</a></li>
+        <li><a href="/admin/search"><img src="<?= BASE_URL_ASSETS ?>images/research.png" alt="" width="40px" height="40px">&nbsp;<span>Rechercher</span></a></li>
     </ul>
 </div>
 </div>
