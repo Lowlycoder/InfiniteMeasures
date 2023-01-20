@@ -46,4 +46,14 @@ class AdminController extends Controller
 
         return $this->render('statistics', $data);
     }
+
+    public function search(): string
+    {
+        $data = [
+            'title' => 'Rechercher',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/adminPanel.css' rel='stylesheet' type='text/css'>"
+        ];
+
+        return $this->render('Search-box', $data);
+    }
 }
