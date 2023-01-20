@@ -161,6 +161,7 @@
                 <input type="radio" id="plus_50" name="Alim3" value="500">
                 <label for="plus_50">Plus de 50%</label><br>
             </div>
+        </form>
             <button class="button">Voir les résultats</button>
             <p id="resultat1"></p>
             <p id="resultat2"></p>
@@ -168,5 +169,4 @@
             <p id="resultat4"></p>
             <p id="resultat5"></p>
             <h4 id="vtotale"></h4>
-    </form>
 </div>
