@@ -2,29 +2,30 @@
     <div id="brand-name">
         <h1>Panel</h1>
     </div>
-    // Bare de menu de la page admin
+    <!-- Bare de menu de la page admin -->
     <ul>
-        <li><a href="/admin/adminPanel"><img src="<?= BASE_URL_ASSETS ?>images/dashboard.png" alt="" width="35px" height="35px">Dashboard</a></li>
-        <li><a href="/admin/tableUser"><i class="fa-regular fa-user fa-2x"></i>Users</a></li>
+        <li><a href="/admin/adminPanel"><img src="<?= BASE_URL_ASSETS ?>images/dashboard.png" alt="" width="35px" height="35px">&nbsp;<span>Dashboard</span></a></li>
+        <li><a href="/admin/tableUser"><i class="fa-regular fa-user fa-2x">&nbsp;</i>Users</a></li>
         <li><a href="/admin/captors"><img src="<?= BASE_URL_ASSETS ?>images/capteur.png" alt="" width="40px" height="40px">&nbsp;<span>Capteurs</span></a></li>
-        <li><a href="/admin/Statistics"><i class="fa-solid fa-chart-pie fa-2x"></i>Statistiques</a></li>
+        <li><a href="/admin/Statistics"><i class="fa-solid fa-chart-pie fa-2x">&nbsp;</i>Statistiques</a></li>
+        <li><a href="/admin/search"><img src="<?= BASE_URL_ASSETS ?>images/research.png" alt="" width="40px" height="40px">&nbsp;<span>Rechercher</span></a></li>
     </ul>
 </div>
 
 
 <div class="container-header">
-    // Header de la page admin
+    <!-- Header de la page admin -->
     <div class="header">
         <div class="nav">
             <div class="search">
                 <input type="text" placeholder="Search..">
-                <button type="submit"><img src="images\search.png" alt=""></button>
+                <button type="submit"><img src="<?= BASE_URL_ASSETS ?>images/search.png" alt=""></button>
             </div>
             <div class="user-connect">
                 <a href="#" class="btn">Add New</a>
-                <img src="images\sonnette.jpg" alt="">
+                <img src="<?= BASE_URL_ASSETS ?>images/sonnette.jpg" alt="">
                 <div class="img-case" style="color:black;">
-                    <img src="user-b.jpg" alt="">
+                    <img src="<?= BASE_URL_ASSETS ?>images/user-b.jpg" alt="">
                 </div>
             </div>
         </div>
