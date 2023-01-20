@@ -24,7 +24,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- page specific js -->
-    <script src="<?= BASE_URL_ASSETS; ?>js/global.js"></script>
+    <script src="<?= BASE_URL_ASSETS ?>js/global.js"></script>
 
     <?= $head ?? null; ?>
 </head>
