@@ -60,9 +60,8 @@ $app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
 
 $app->router->get('/admin/login', [AuthController::class, 'adminLogin']);
 $app->router->get('/admin', [AdminController::class, 'admin']);
-$app->router->get('/captors', [AdminController::class, 'captors']);
-$app->router->get('/tableUser', [AdminController::class, 'tableUser']);
-$app->router->get('/statistics', [AdminController::class, 'statistics']);
-$app->router->get('/Search-box', [AdminController::class, 'Search-box']);
-
+$app->router->get('/admin/captors', [AdminController::class, 'captors']);
+$app->router->get('/admin/tableUser', [AdminController::class, 'tableUser']);
+$app->router->get('/admin/statistics', [AdminController::class, 'statistics']);
+$app->router->get('/admin/search', [AdminController::class, 'search']);
 $app->run();
