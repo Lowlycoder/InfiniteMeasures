@@ -19,10 +19,4 @@ class Model
 
         return ob_get_clean(); // return output buffer contents and clear buffer
     }
-
-    /** Escape html correctly for output in the browser */
-    public function escapeHtml(string $string): string
-    {
-        return htmlentities($string, ENT_QUOTES, 'UTF-8');
-    }
 }

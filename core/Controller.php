@@ -17,11 +17,15 @@ class Controller
         return Application::$app->view->renderView($view, $params);
     }
 
+    protected function validatePost(string $var_name, int $filter = FILTER_SANITIZE_STRING): string|false
+    {
+        $var_name = filter_input(INPUT_POST, $var_name, $filter);
+
+        return empty($var_name) ? false : $var_name;
+    }
+
 //    public function checkAdmin(): bool
 //    {
-//        if (Application::$app->session->get('admin') === true) {
-//            return true;
-//        }
-//        return false;
+//        return Application::$app->session->get('admin');
 //    }
 }

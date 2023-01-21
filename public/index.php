@@ -51,10 +51,13 @@ $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
 $app->router->get('/reset', [AuthController::class, 'reset']);
+$app->router->get('/logout', [AuthController::class, 'logout']);
 $app->router->get('/empreinte-carbone', [HomeController::class, 'empreinteCarbone']);
 $app->router->get('/qcm', [HomeController::class, 'qcm']);
 $app->router->get('/contact', [HomeController::class, 'contact']);
 $app->router->post('/contact', [HomeController::class, 'contact']);
 $app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
+
+$app->router->get('/admin/login', [AuthController::class, 'adminLogin']);
 
 $app->run();

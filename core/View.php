@@ -27,8 +27,9 @@ class View
         return ob_get_clean();
     }
 
-    public function escapeHtml(string $string): string
+    /* Escape html correctly for output in the browser */
+    public function escapeHtml(&$string): string|null
     {
-        return htmlentities($string, ENT_QUOTES, 'UTF-8');
+        return isset($string) ? htmlspecialchars($string, ENT_QUOTES) : null;
     }
 }

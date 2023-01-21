@@ -107,8 +107,8 @@
 
             <h2>Transports</h2>
             <h4 class="mb-1">Avez-vous une voiture ?</h4>
-            <input type="radio" id="voiture" name="mode_transport" value="oui">
-            <label for="voiture">Oui</label><br>
+            <input type="radio" id="voiture_oui" name="mode_transport" value="oui">
+            <label for="voiture_oui">Oui</label><br>
             <input type="radio" id="voiture_non" name="mode_transport" value="non">
             <label for="voiture_non">Non</label><br>
 
