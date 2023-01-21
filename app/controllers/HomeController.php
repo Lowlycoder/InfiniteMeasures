@@ -2,19 +2,19 @@
 
 namespace app\controllers;
 
+use app\models\HomeModel;
 use core\Application;
 use core\Controller;
-use app\models\HomeModel;
 
-/** Handle functionality for home page. */
 class HomeController extends Controller
 {
     public function index(): string
     {
-        $homeModel = new HomeModel();
-        $data = ['title' => 'Accueil',
-            'page' => $homeModel->getPageText()];
-        $data['description_html'] = $homeModel->getViewHtml('html_description', $data);
+        $data = ['title' => 'Accueil'];
+
+        // example for inserting other views in a layout
+//        $homeModel = new HomeModel();
+//        $data['description'] = $homeModel->getViewHtml('description', $data);
 
         return $this->render('home', $data);
     }
@@ -22,62 +22,74 @@ class HomeController extends Controller
     public function faq(): string
     {
         $homeModel = new HomeModel();
-        $data = ['title' => 'FAQ',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/accordion.css' rel='stylesheet' type='text/css'>",
-            'faq' => $homeModel->getFAQ()];
+        $data = [
+            'title' => 'FAQ',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/accordion.css" rel="stylesheet" type="text/css">',
+            'faq' => $homeModel->getFAQ(),
+        ];
 
         return $this->render('faq', $data);
     }
 
     public function contact(): string
     {
-//        if (Application::$app->router->getMethod() === 'post') // On vérifie si le sujet a été remplie: c'est juste pour éviter que le serveur exécute tout le script php. Ce qui enverait une erreure
-//        {
-//            $to="isante044@gmail.com";   //destinataire du mail
-//            $subject=$_POST['subject'];  //sujet du mail
-//            $message="<strong>From :</strong>{$_POST['email']}<br>{$_POST['message']}<br><br><br>Cordialement ".$_POST['name'].'.'; //message du mail
-//
-//            $headers=array(
-//                'From'=>  $_POST['email'],
-//                'Reply-To' => $_POST['email'],
-//                'content-type' => 'text/html'
-//            );   // Le header est un paramètre de la fonction mail qui contient entêtes
-//
-//            $sentMail=mail($to,$subject,$message,$headers);
-//            if(!empty($_POST['message']) ) {
-//                if($sentMail){
-//                    echo "Your email has been sent successfully !";
-//                }else{
-//                    echo "Error !!!";
-//                }
-//            }
-//        }
-
         $data = ['title' => 'Contact'];
+        if ('post' === Application::$app->router->getMethod()) {
+            $email = $this->validatePost('email', FILTER_VALIDATE_EMAIL);
+            $name = $this->validatePost('name');
+            $subject = $this->validatePost('subject');
+            $message = $this->validatePost('message');
+            if (!$email) {
+                $data['error'] = 'Email invalid';
+            } elseif (!$subject) {
+                $data['error'] = 'Subject invalid';
+            } elseif (!$name) {
+                $data['error'] = 'Name invalid';
+            } elseif (!$message) {
+                $data['error'] = 'Message invalid';
+            } else {
+                $homeModel = new HomeModel();
+                if ($homeModel->sendContactEmail($email, $name, $subject, $message)) {
+                    $data['success'] = 'Message sent';
+                    Application::$app->router->redirect('/');
+                } else {
+                    $data['error'] = 'Message not sent';
+                }
+            }
+            $data['name'] = $name;
+            $data['email'] = $email;
+            $data['subject'] = $subject;
+            $data['message'] = $message;
+        }
+
         return $this->render('contact', $data);
     }
 
     public function cgu(): string
     {
         $data = ['title' => 'Conditions générales d\'utilisations'];
+
         return $this->render('cgu', $data);
     }
 
     public function empreinteCarbone(): string
     {
         $data = ['title' => 'Empreinte Carbone'];
-        return $this->render('empreintecarbone', $data);
+
+        return $this->render('empreinteCarbone', $data);
     }
 
     public function qcm(): string
     {
         $data = ['title' => 'QCM'];
+
         return $this->render('qcm', $data);
     }
 
     public function funFacts(): string
     {
         $data = ['title' => 'Fun Facts'];
+
         return $this->render('funFacts', $data);
     }
 }

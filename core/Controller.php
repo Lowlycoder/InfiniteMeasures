@@ -17,14 +17,15 @@ class Controller
         return Application::$app->view->renderView($view, $params);
     }
 
-//    /**
-//     * @param string $viewFile view file path in app/views
-//     * @param $data
-//     * @return void
-//     */
-//    public function loadView(string $viewFile, $data): void
+    protected function validatePost(string $var_name, int $filter = FILTER_SANITIZE_STRING): string|false
+    {
+        $var_name = filter_input(INPUT_POST, $var_name, $filter);
+
+        return empty($var_name) ? false : $var_name;
+    }
+
+//    public function checkAdmin(): bool
 //    {
-//        extract($data); // convert array key/values to individual php variables for the view
-//        require_once __DIR__ . "/../app/views/$viewFile.php";
+//        return Application::$app->session->get('admin');
 //    }
 }
