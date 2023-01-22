@@ -9,7 +9,7 @@
                 <a href="/faq" class="nav-link">FAQ</a>
                 <a href="/empreinte-carbone" class="nav-link">Mesurer mon empreinte carbone</a>
                 <a href="#" class="nav-link">
-                    <img src="<?= BASE_URL_ASSETS; ?>images/French_flag.png" alt="flag" width="30px" height="30px">
+                    <img src="<?= BASE_URL_ASSETS ?>images/fr-flag.png" alt="flag" width="30px" height="30px">
                 </a>
                 <a href="/login" class="button ms-auto me-2">Se connecter</a>
                 <a href="/register" class="button">Créer un compte</a>

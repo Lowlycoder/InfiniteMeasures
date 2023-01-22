@@ -1,28 +1,28 @@
-<div id="band-stat">
-    <h2 style="padding: 40px 0 0 90px;color:#88CAF0;">STATISTICS</h2>
+<?= $sidePanel ?? null ?>
+
+<div id="band">
+    <h2 style="padding: 40px 0 0 90px;color:#88CAF0;">Statistiques</h2>
 </div>
 
-<div id="stat-container">
-
-    <div style="width:550px;height:300px;" class="box-stats">
+<div class="flex-row">
+    <div style="width:550px;height:300px;" class="box-stat">
         <canvas id="firstChart"></canvas>
     </div>
 
-    <div style="width:550px;height:300px;" class="box-stats">
+    <div style="width:550px;height:300px;" class="box-stat">
         <canvas id="secondChart"></canvas>
     </div>
 
-    <!-- <div style="width:550px;height:300px;" class="box-stats">
+    <!-- <div style="width:550px;height:300px;" class="box-stat">
         <canvas id="thirdChart"></canvas>
     </div> -->
 
-    <!-- <div style="width:550px;height:300px;" class="box-stats">
+    <!-- <div style="width:550px;height:300px;" class="box-stat">
         <canvas id="fourthChart"></canvas>
     </div> -->
-
 </div>
 
-// code graphique des revenues mensuelles
+<!--code graphique des revenues mensuelles-->
 
 <script>
     var xValues = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -34,17 +34,17 @@
         data: {
             labels: xValues,
             datasets: [{
-                label: 'Earning',
+                label: "Earning",
                 backgroundColor: barColors,
-                data: yValues
-            }]
+                data: yValues,
+            }],
         },
         options: {
             title: {
                 display: true,
-                text: "Production of year"
-            }
-        }
+                text: "Production of year",
+            },
+        },
     });
 
 
@@ -61,14 +61,14 @@
             labels: xValues,
             datasets: [{
                 backgroundColor: barColors_2,
-                data: yValues
-            }]
+                data: yValues,
+            }],
         },
         options: {
             title: {
                 display: true,
-                text: "Users"
-            }
-        }
+                text: "Users",
+            },
+        },
     });
 </script>

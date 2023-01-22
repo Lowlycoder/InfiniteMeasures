@@ -92,40 +92,4 @@ class HomeController extends Controller
 
         return $this->render('funFacts', $data);
     }
-
-    public function research(): string
-    {
-        $data = [
-            'title' => 'Search-box',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/adminPanel.css' rel='stylesheet' type='text/css'>",
-        ];
-
-        return $this->render('Search-box', $data);
-    }
-
-    public function captors(): string
-    {
-        $data = [
-            'title' => 'captor',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/captor.css' rel='stylesheet' type='text/css'>",
-        ];
-
-        return $this->render('Search-box', $data);
-    }
-
-    public function stat(): string
-    {
-        $data = [
-            'title' => 'adminPanel',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/adminPanel.css' rel='stylesheet' type='text/css'>",
-        ];
-
-        return $this->render('adminPanel', $data);
-    }
-
-    // public function funFacts(): string
-    // {
-    //     $data = ['title' => 'Fun Facts'];
-    //     return $this->render('funFacts', $data);
-    // }
 }

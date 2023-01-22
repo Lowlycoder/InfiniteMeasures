@@ -3,45 +3,66 @@
 namespace app\controllers;
 
 use core\Controller;
+use core\Model;
 
 /** Handle functionality for home page. */
 class AdminController extends Controller
 {
     public function admin(): string
     {
+        $model = new Model;
         $data = [
-            'title' => 'AdminPanel',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/adminPanel.css' rel='stylesheet' type='text/css'>"
+            'title' => 'Dashboard',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/tableUser.css" rel="stylesheet" type="text/css">',
+            'sidePanel' => $model->getViewHtml('adminSidePanel'),
         ];
 
         return $this->render('adminPanel', $data);
     }
 
-    public function captors(): string
+    public function sensors(): string
     {
+        $model = new Model;
         $data = [
-            'title' => 'captors',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/captor.css' rel='stylesheet' type='text/css'>"
+            'title' => 'Les capteurs',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/tableUser.css" rel="stylesheet" type="text/css">',
+            'sidePanel' => $model->getViewHtml('adminSidePanel'),
         ];
 
-        return $this->render('captors', $data);
+        return $this->render('sensors', $data);
     }
 
     public function tableUser(): string
     {
+        $model = new Model;
         $data = [
-            'title' => 'tableUser',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/tableUser.css' rel='stylesheet' type='text/css'>"
+            'title' => 'Gestion des utilisateurs',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/tableUser.css" rel="stylesheet" type="text/css">',
+            'sidePanel' => $model->getViewHtml('adminSidePanel'),
         ];
 
         return $this->render('tableUser', $data);
     }
 
+    public function editUser(): string
+    {
+        $model = new Model;
+        $data = [
+            'title' => 'Gestion des utilisateurs',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/tableUser.css" rel="stylesheet" type="text/css">',
+            'sidePanel' => $model->getViewHtml('adminSidePanel'),
+        ];
+
+        return $this->render('editUser', $data);
+    }
+
     public function statistics(): string
     {
+        $model = new Model;
         $data = [
-            'title' => 'statistics',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/stats.css' rel='stylesheet' type='text/css'>"
+            'title' => 'Statistics',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/tableUser.css" rel="stylesheet" type="text/css">',
+            'sidePanel' => $model->getViewHtml('adminSidePanel'),
         ];
 
         return $this->render('statistics', $data);
@@ -49,11 +70,13 @@ class AdminController extends Controller
 
     public function search(): string
     {
+        $model = new Model;
         $data = [
             'title' => 'Rechercher',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/adminPanel.css' rel='stylesheet' type='text/css'>"
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/tableUser.css" rel="stylesheet" type="text/css">',
+            'sidePanel' => $model->getViewHtml('adminSidePanel'),
         ];
 
-        return $this->render('Search-box', $data);
+        return $this->render('search', $data);
     }
 }
