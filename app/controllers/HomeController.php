@@ -93,12 +93,11 @@ class HomeController extends Controller
         return $this->render('funFacts', $data);
     }
 
-    public function user(): string
+    public function dashboard(): string
     {
         $data = [
             'title' => 'Tableau de bord',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>
-            <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>"
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>"
         ];
         return $this->render('user', $data);
     }
@@ -106,18 +105,20 @@ class HomeController extends Controller
     public function capteursUser(): string
     {
         $data = [
-            'title' => 'capteurs',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>
-            <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>"
+            'title' => 'Statistiques capteurs',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>"
         ];
+
         return $this->render('capteursUser', $data);
     }
+
     public function reglages(): string
     {
         $data = [
-            'title' => 'reglages',
-            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>
-            <link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>"
+            'title' => 'Réglages',
+            'head' => "<link href='" . BASE_URL_ASSETS . "css/user.css' rel='stylesheet' type='text/css'>"
         ];
+
         return $this->render('reglages', $data);
     }
+}

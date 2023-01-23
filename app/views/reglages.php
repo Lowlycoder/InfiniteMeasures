@@ -16,7 +16,8 @@
                 <a href="/dashboard"><span class="material-icons-outlined">dashboard</span>Tableau de Bord</a>
             </li>
             <li class="sidebar-list-item">
-                <a href="/capteursUser"><span class="material-icons-outlined">insert_chart</span> Capteurs</a>
+                <a href="/capteursUser"><span class="material-icons-outlined">insert_chart</span>Statistiques
+                    Capteurs</a>
             </li>
             <li class="sidebar-list-item">
                 <a href="/reglages"><span class="material-icons-outlined">settings</span>Réglages</a>

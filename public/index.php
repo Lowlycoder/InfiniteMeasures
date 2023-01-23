@@ -58,6 +58,10 @@ $app->router->get('/contact', [HomeController::class, 'contact']);
 $app->router->post('/contact', [HomeController::class, 'contact']);
 $app->router->get('/fun-facts', [HomeController::class, 'funFacts']);
 
+$app->router->get('/dashboard', [HomeController::class, 'dashboard']);
+$app->router->get('/capteursUser', [HomeController::class, 'capteursUser']);
+$app->router->get('/reglages', [HomeController::class, 'reglages']);
+
 $app->router->get('/admin/login', [AuthController::class, 'adminLogin']);
 
 $app->run();
