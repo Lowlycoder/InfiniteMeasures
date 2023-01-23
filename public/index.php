@@ -2,6 +2,7 @@
 
 declare(strict_types=1); // set strict types for current file
 
+use app\controllers\AdminController;
 use app\controllers\AuthController;
 use app\Controllers\HomeController;
 use core\Application;
