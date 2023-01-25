@@ -1,20 +1,19 @@
 <aside id="sidebar">
     <div class="sidebar-title">
         <div class="sidebar-brand">
-            <span class="material-icons-outlined">home</span> Bonjour, john jones
+            <i class="fa-solid fa-house"></i> Bonjour, John Jones
         </div>
         <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
     </div>
     <ul class="sidebar-list">
         <li class="sidebar-list-item">
-            <a href="/dashboard"><span class="material-icons-outlined">dashboard</span>Tableau de Bord</a>
+            <a href="/dashboard"><i class="fa-solid fa-border-all fa-xl"></i> Tableau de Bord</a>
         </li>
         <li class="sidebar-list-item">
-            <a href="/capteurs"><span class="material-icons-outlined">insert_chart</span>Statistiques
-                Capteurs</a>
+            <a href="/capteurs"><i class="fa-solid fa-chart-line fa-xl"></i> Statistiques Capteurs</a>
         </li>
         <li class="sidebar-list-item">
-            <a href="/reglages"><span class="material-icons-outlined">settings</span>Réglages</a>
+            <a href="/reglages"><i class="fa-solid fa-sliders fa-xl"></i> Réglages</a>
         </li>
     </ul>
 </aside>

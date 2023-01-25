@@ -11,25 +11,25 @@
             <div class="card">
                 <div class="card-inner">
                     <p>Température</p>
-                    <span class="material-icons-outlined text-red">thermostat</span>
+                    <i class="fa-solid fa-temperature-three-quarters fa-3x"></i>
                 </div>
-                <spanfont-weight-bold">37°</span>
+                <span class="font-weight-bold">37°</span>
             </div>
 
             <div class="card">
                 <div class="card-inner">
                     <p>Dioxyde de carbone</p>
-                    <span class="material-icons-outlined">co2</span>
+                    <span class="material-icons-outlined" style="font-size: 1.75rem">CO2</span>
                 </div>
-                <spanfont-weight-bold">25 ppm</span>
+                <span class="font-weight-bold">25 ppm</span>
             </div>
 
             <div class="card">
                 <div class="card-inner">
                     <p>Humidité</p>
-                    <span class="material-icons-outlined text-blue">water_drop</span>
+                    <i class="fa-solid fa-droplet fa-3x"></i>
                 </div>
-                <spanfont-weight-bold">26 g/m3</span>
+                <span class="font-weight-bold">26 g/m3</span>
             </div>
 
         </div>
@@ -37,7 +37,7 @@
         <div class="card flex-row" style="border-left: 7px solid #27d721b6">
             <div class="col-md">
                 <p>QCM</p>
-                <p> Votre empreinte carbone annuelle est de 9 tonnes de C02 </p>
+                <p> Votre empreinte carbone annuelle est de 9 tonnes de C02</p>
             </div>
             <div class="col-md w-100 text-end justify-content-end align-items-center d-flex">
                 <a href="/qcm">Cliquez ici pour recalculer votre empreinte carbone</a>
