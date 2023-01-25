@@ -9,7 +9,7 @@ class DotEnv
     public function __construct(string $path)
     {
         if (!file_exists($path)) {
-            throw new \InvalidArgumentException("$path does not exist");
+//            throw new \InvalidArgumentException("$path does not exist");
         }
         $this->path = $path;
     }
@@ -17,7 +17,10 @@ class DotEnv
     public function load(): void
     {
         if (!is_readable($this->path)) {
-            throw new \RuntimeException("$this->path file is not readable");
+//            throw new \RuntimeException("$this->path file is not readable");
+            error_log("core\DotEnv.php: $this->path file is not readable");
+
+            return;
         }
 
         $lines = file($this->path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);

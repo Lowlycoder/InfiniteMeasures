@@ -10,7 +10,7 @@ class Model
      *
      * @param string $viewFile Name of the view file. Path starts from the Views folder.
      */
-    public function getViewHtml(string $viewFile, array $data): string
+    public function getViewHtml(string $viewFile, array $data = []): string
     {
         // convert data array key/values to individual variables for the view
         extract($data);
