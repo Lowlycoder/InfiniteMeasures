@@ -58,7 +58,7 @@ class Database
         $this->_fetchType = '';
     }
 
-    public function table(string $tableName): Database
+    public function table(string $tableName): self
     {
         $this->_tableName = $tableName;
 
@@ -72,7 +72,7 @@ class Database
      * @param string $tableString name of the table for joining
      * @param string $onString    ON string for the join
      */
-    public function join(string $type, string $tableString, string $onString): Database
+    public function join(string $type, string $tableString, string $onString): self
     {
         $this->_join[] = [
             'type' => $type,
@@ -87,7 +87,7 @@ class Database
      * @param string $operator =, <, >, <=, >=, LIKE, etc. Default '='
      * @param string $type     For chaining arguments. Accepts 'AND' or 'OR' Default empty
      */
-    public function where(string $column, string $value, string $operator = '=', string $type = ''): Database
+    public function where(string $column, string $value, string $operator = '=', string $type = ''): self
     {
         $this->_where[] = [
             'column' => $column,
@@ -100,21 +100,21 @@ class Database
     }
 
     /** Set order by for use when running the query (ASC/DESC). */
-    public function orderBy(string $column, string $direction = 'ASC'): Database
+    public function orderBy(string $column, string $direction = 'ASC'): self
     {
         $this->_orderBy[] = ['column' => $column, 'direction' => $direction];
 
         return $this;
     }
 
-    public function setParameter(string $key, string $value): Database
+    public function setParameter(string $key, string $value): self
     {
         $this->_parameters[$key] = $value;
 
         return $this;
     }
 
-    public function setParameters(array $parameters): Database
+    public function setParameters(array $parameters): self
     {
         foreach ($parameters as $key => $value) {
             $this->setParameter($key, $value);
@@ -129,7 +129,7 @@ class Database
     }
 
     /** Set the fetch type the PDO result with use. */
-    public function fetch(string $fetchType = Database::PDO_FETCH_SINGLE): Database
+    public function fetch(string $fetchType = self::PDO_FETCH_SINGLE): self
     {
         $this->_fetchType = $fetchType;
 
@@ -213,7 +213,7 @@ class Database
     {
         $setSql = '';
         $rowCount = 1;
-        $this->_fetchType = Database::PDO_GET_ROW_COUNT;
+        $this->_fetchType = self::PDO_GET_ROW_COUNT;
 
         foreach ($updateData as $column => $value) {
             // add column and column variable to set sql
@@ -229,7 +229,7 @@ class Database
 
     public function runDeleteQuery(): int|bool
     {
-        $this->_fetchType = Database::PDO_GET_ROW_COUNT;
+        $this->_fetchType = self::PDO_GET_ROW_COUNT;
         $this->_sql = "DELETE FROM `$this->_tableName`";
         $this->_buildWhere();
 
@@ -261,11 +261,11 @@ class Database
             )
         ); // execute the query with the prepared statements adding a ':' to the start of the keys
 
-        if (Database::PDO_FETCH_SINGLE == $this->_fetchType) { // fetching single array
+        if (self::PDO_FETCH_SINGLE == $this->_fetchType) { // fetching single array
             $result = $pdo->fetch();
-        } elseif (Database::PDO_FETCH_MULTI == $this->_fetchType) { // fetch multidimensional array
+        } elseif (self::PDO_FETCH_MULTI == $this->_fetchType) { // fetch multidimensional array
             $result = $pdo->fetchAll();
-        } elseif (Database::PDO_GET_ROW_COUNT == $this->_fetchType) { // return affected row count for update and delete
+        } elseif (self::PDO_GET_ROW_COUNT == $this->_fetchType) { // return affected row count for update and delete
             $result = $pdo->rowCount();
         } else {
             $result = $this->_conn->lastInsertId(); // return last inserted/updated row id

@@ -2,6 +2,8 @@
 
 namespace core;
 
+use app\service\Mailer;
+
 class Application
 {
     public static Application $app;
@@ -9,6 +11,7 @@ class Application
     public View $view;
     public ?Controller $controller = null;
     public Database $db;
+    public Mailer $mailer;
 
     public function __construct($dbConfig) // string $dirname, array $config
     {
@@ -16,6 +19,7 @@ class Application
         $this->router = new Router();
         $this->view = new View();
         $this->db = new Database($dbConfig);
+        $this->mailer = new Mailer();
     }
 
     public function run(): void

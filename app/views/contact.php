@@ -11,9 +11,11 @@
                 <label for="subject">Sujet</label>
                 <input type="text" name="subject" id="subject" required value="<?= $this->escapeHtml($subject); ?>">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" cols="52" rows="10" required>
-                    <?= $this->escapeHtml($message); ?>
-                </textarea>
+                <textarea name="message" id="message"
+                          cols="52" rows="10" required><?= $this->escapeHtml($message); ?></textarea>
+                <?php if ($error ?? false) {
+                    echo "<p class='error'>$error</p>";
+                } ?>
                 <button class="my-3">Envoyer</button>
             </form>
         </div>
