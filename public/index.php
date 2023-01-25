@@ -3,7 +3,7 @@
 declare(strict_types=1); // set strict types for current file
 
 use app\controllers\AuthController;
-use app\Controllers\HomeController;
+use app\controllers\HomeController;
 use core\Application;
 use core\DotEnv;
 
@@ -20,8 +20,8 @@ define('ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 $isSecure = (!empty($_SERVER['HTTPS']) && 'off' !== $_SERVER['HTTPS']) || 443 == $_SERVER['SERVER_PORT'];
 define('PROTOCOL', getenv('HTTPS') || $isSecure ? 'https://' : 'http://');
 define('HOST_PATH', PROTOCOL.$_SERVER['HTTP_HOST'].'/');
-define('BASE_URL', HOST_PATH.dirname($_SERVER['PHP_SELF']).'/'); // root path
-const BASE_URL_ASSETS = BASE_URL.'assets/';
+// define('BASE_URL', HOST_PATH.dirname($_SERVER['PHP_SELF']).'/'); // root path
+const BASE_URL_ASSETS = HOST_PATH.'assets/';
 
 error_reporting(-1); // E_ALL
 ini_set('error_log', dirname(__FILE__).'/../errors.log');
