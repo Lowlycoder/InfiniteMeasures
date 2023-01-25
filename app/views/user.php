@@ -10,39 +10,38 @@
         <div class="main-cards">
             <div class="card">
                 <div class="card-inner">
-                    <p class="text-primary">Température</p>
+                    <p>Température</p>
                     <span class="material-icons-outlined text-red">thermostat</span>
                 </div>
-                <span class="text-primary font-weight-bold">37°</span>
+                <spanfont-weight-bold">37°</span>
             </div>
 
             <div class="card">
                 <div class="card-inner">
-                    <p class="text-primary">Dioxyde de carbone</p>
+                    <p>Dioxyde de carbone</p>
                     <span class="material-icons-outlined">co2</span>
                 </div>
-                <span class="text-primary font-weight-bold">25 ppm</span>
+                <spanfont-weight-bold">25 ppm</span>
             </div>
 
             <div class="card">
                 <div class="card-inner">
-                    <p class="text-primary">Humidité</p>
+                    <p>Humidité</p>
                     <span class="material-icons-outlined text-blue">water_drop</span>
                 </div>
-                <span class="text-primary font-weight-bold">26 g/m3</span>
+                <spanfont-weight-bold">26 g/m3</span>
             </div>
 
         </div>
         <br>
-        <div class="qcm2">
-            <p>QCM</p>
-            <p> Votre score est 320 </p>
-            <br>
-            <a href="/qcm">
-                <p>Cliquez ici pour améliorer votre score</p>
-            </a>
-
+        <div class="card flex-row" style="border-left: 7px solid #27d721b6">
+            <div class="col-md">
+                <p>QCM</p>
+                <p> Votre empreinte carbone annuelle est de 9 tonnes de C02 </p>
+            </div>
+            <div class="col-md w-100 text-end justify-content-end align-items-center d-flex">
+                <a href="/qcm">Cliquez ici pour recalculer votre empreinte carbone</a>
+            </div>
         </div>
-
     </main>
 </div>
