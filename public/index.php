@@ -36,8 +36,9 @@ if (ENVIRONMENT == 'development') { // dev environment, display all errors
 
 $dbConfig = [
     'hostname' => getenv('DB_HOSTNAME') ?: 'localhost:3306',
-    'username' => getenv('DB_USERNAME') ?: 'root',
-    'password' => getenv('DB_PASSWORD') ?: 'root',
+    'username' => getenv('DB_USERNAME') ?: '',
+    'password' => getenv('DB_PASSWORD') ?: 'root
+    ',
     'database' => getenv('DB_DATABASE') ?: 'colibrit',
 ];
 
