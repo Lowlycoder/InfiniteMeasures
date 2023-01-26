@@ -15,6 +15,8 @@ class HomeController extends Controller
         // example for inserting other views in a layout
 //        $homeModel = new HomeModel();
 //        $data['description'] = $homeModel->getViewHtml('description', $data);
+        $data['head'] = '<link href="'.BASE_URL_ASSETS.'css/slider.css" rel="stylesheet" type="text/css">';
+        $data['head'] .= '<link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" type="text/css">';
 
         return $this->render('home', $data);
     }
