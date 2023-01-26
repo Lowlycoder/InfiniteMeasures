@@ -92,4 +92,40 @@ class HomeController extends Controller
 
         return $this->render('funFacts', $data);
     }
+
+    public function dashboard(): string
+    {
+        $homeModel = new HomeModel();
+        $data = [
+            'title' => 'Tableau de bord',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/user.css" rel="stylesheet" type="text/css">',
+            'sideBar' => $homeModel->getViewHtml('sideBarUser', []),
+        ];
+
+        return $this->render('user', $data);
+    }
+
+    public function capteursUser(): string
+    {
+        $homeModel = new HomeModel();
+        $data = [
+            'title' => 'Statistiques capteurs',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/user.css" rel="stylesheet" type="text/css">',
+            'sideBar' => $homeModel->getViewHtml('sideBarUser', []),
+        ];
+
+        return $this->render('capteursUser', $data);
+    }
+
+    public function reglages(): string
+    {
+        $homeModel = new HomeModel();
+        $data = [
+            'title' => 'Réglages',
+            'head' => '<link href="'.BASE_URL_ASSETS.'css/user.css" rel="stylesheet" type="text/css">',
+            'sideBar' => $homeModel->getViewHtml('sideBarUser', []),
+        ];
+
+        return $this->render('reglages', $data);
+    }
 }
