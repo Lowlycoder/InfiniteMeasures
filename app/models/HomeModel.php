@@ -40,18 +40,19 @@ class HomeModel extends Model
 
     public function sendContactEmail(string $email, string $name, string $subject, string $message): bool
     {
-        $to = 'no-reply.isante@outlook.com';
-        $message = "$message
-                    <br><br>
-                    Cordialement,<br>
-                    $name";
+        try {
+            Application::$app->mailer
+                ->toAdmin()
+                ->replyTo($email, $name)
+                ->subject($subject)
+                ->body('contact', ['name' => $name, 'message' => $message])
+                ->send();
+        } catch (\Exception $e) {
+            error_log($e->getMessage());
 
-        $headers = [
-            'From' => $email,
-            'Reply-To' => $email,
-            'content-type' => 'text/html',
-        ];   // Le header est un paramètre de la fonction mail qui contient entêtes
+            return false;
+        }
 
-        return mail($to, $subject, $message, $headers);
+        return true;
     }
 }
